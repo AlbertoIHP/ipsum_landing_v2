@@ -62,6 +62,22 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+
+.img-footer-ipsum{
+  position: relative;
+  left: -27px;
+  max-width: 200px;
+}
+
+.img-footer-ipsum-container{
+    height: 149px;
+}
+
+
+.footer-ipsum-container{
+  margin-top: -60px;
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -128,7 +144,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dropdown-menu{
-  min-width: 7.5rem !important;
+  min-width: 6.5rem !important;
 }
 
 
@@ -724,9 +740,59 @@ body.mobile-nav-active #mobile-nav-toggle {
     text-align: center !important
 }
 
+
 .btn-ask-demo:hover {
   background: #333333;
 }
+
+
+.btn-ask-footer {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff !important;
+  background-color: #ec6907;
+  border-width: 0;
+  width: 224px;
+  text-align: center !important;
+}
+
+.rrss-icons-styles{
+  text-align: right;
+}
+
+
+.stores-img{
+  max-width: 110px;
+}
+
+
+.link-android-specific-style{
+  position: relative;
+  left: 0px;
+}
+
+.contact-container-conf{
+  padding-top: 107px;
+}
+
+.rrss-styles{
+  max-width: 37px;
+}
+
+
+.btn-ask-footer:hover {
+  background: #333333;
+}
+
+
 
 .specs-container{
   position: relative;
@@ -734,13 +800,59 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .integration-soft-section {
-  background-image: url("../img/ipsum/back_integration_soft.png");
-  filter: brightness(50%);
+  background-image: url("../img/ipsum/back_integration_soft.jpg");
+  filter: brightness(20%);
+  background-size: cover;
+  height: 600px;
+  background-color: white;
+}
+
+.integration-title{
+  font-weight: 600;
+  font-size: 26px;
+  color: white;
+}
+
+.integration-description{
+  text-align: justify;
+  color: white !important;
+}
+
+
+.integration-soft-text{
+  position: relative;
+  top: -385px;
+}
+
+.over-footer-integration{
+  height: 16px;
+  background-color: #333 !important;
+}
+
+.footer-detail{
+  background-color: #333 !important;
 }
 
 .specs-background{
   background-color: #126085 !important;
   height: 440px;
+}
+
+.contact-info-title{
+  text-align: left;
+  color: white;
+  font-size: larger;
+}
+
+
+.footer-contact-info{
+  margin: 0 0 -25px 0;
+  color: white;font-size: small;
+}
+
+.contact-section-style{
+  background-color: #333;
+  height: 275px;
 }
 
 #features .features-img img {
@@ -777,8 +889,19 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 
   .specs-background{
-    height: 1100px;
+    height: 1130px;
   }
+
+  .contact-section-style{
+    background-color: #333;
+    height: 100%;
+  }
+
+  .rrss-icons-styles{
+    text-align: center;
+  }
+
+
 }
 
 #features .box {
@@ -1257,8 +1380,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Contact Section
 --------------------------------*/
 #contact {
-  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
-  padding: 60px 0;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+  padding: 0px 0;
 }
 
 #contact .contact-about h3 {

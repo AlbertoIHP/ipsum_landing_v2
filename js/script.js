@@ -19,7 +19,7 @@ async function mainAppFunction( $scope, $http )
   $scope.sending = false
   $scope.sended = false
 
-  $scope.contactForm = { name: '', email: '', phone: '', bussinessName: '', bussinessArea: 'Área en la empresa' }
+  $scope.contactForm = { name: '', email: '', item: '', phone: '' }
 
   $scope.sendInfo = async function()
   {

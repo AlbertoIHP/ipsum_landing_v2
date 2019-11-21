@@ -25,5 +25,14 @@ var es = {
       TITLE_TEXT: "Lean - BIM",
       BODY_TEXT: "En ProPlanner® podrás importar y visualizar modelos 3D (Revit, Tekla, etc.). Además de crear vinculos entre elementos del modelo y la programación, así de esa manera, generar un modelo animado 4D."
     }
+  },
+  INTEGRATION: {
+    TITLE_TEXT: "ProPlanner se integra con distintos softwares",
+    BODY_TEXT: "ProPlanner se integra con softwares como, Autodesk Autocad, Autodesk Revit, Project y Primavera de Oracle, lo que estimula el trabajo de una manera eficiente y colaborativa entre plataformas."
+  },
+  FOOTER: {
+    BODY_TEXT: 'Una empresa chilena nacida el 2014, con la misión de aportar a la mejora en la productividad de la industria nacional e internacional, buscando lograr un impacto tanto económico como social, aportando asi a la creacion de verdaderas "smart cities".',
+    CONTACT: 'Contacto',
+    BTN_TEXT: "Agenda tu hora"
   }
 }
