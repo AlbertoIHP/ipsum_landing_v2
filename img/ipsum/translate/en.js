@@ -33,5 +33,40 @@ var en = {
     BODY_TEXT: 'A Chilean company born in 2014, with the mission of contributing to the improvement in the productivity of the national and international industry, seeking to achieve both an economic and social impact, thus contributing to the creation of true "smart cities".',
     CONTACT: 'Contact',
     BTN_TEXT: "Schedule your time"
+  },
+  FORM: {
+    STEP_ONE: {
+      NORMAL_TEXT: "Tell us about yourself, ",
+      BOLD_TEXT: "¿What is your full name?:",
+      PLACEHOLDER_TEXT: "Write your answer here...",
+      BTN_TEXT: "Continue"
+    },
+    STEP_TWO: {
+      NORMAL_TEXT: "We want to contact you, ",
+      BOLD_TEXT: "Enter your email:",
+      PLACEHOLDER_TEXT: "Write your answer here...",
+      BTN_TEXT: "Continue"
+    },
+    STEP_THREE: {
+      OP_ONE: "Building",
+      OP_TWO: "Real estate",
+      OP_THREE: "Mining",
+      OP_FOUR: "Mounting",
+      OP_FIVE: "Infrastructure",
+      OP_SIX: "Other"
+    },
+    STEP_FOUR: {
+      NORMAL_TEXT: "Select your country and  ",
+      BOLD_TEXT: "Enter your contact number:",
+      PLACEHOLDER_TEXT: "Enter your number...",
+      BTN_TEXT: "Continue"
+    },
+    STEP_FINAL: {
+      TITLE_TEXT: "¡Thank you so much!",
+      BODY_TEXT: "We have received your information and you will be contacted by one of our specialists in the following ",
+      BOLD_TEXT: "24 business hours.",
+      BOTTOM_TEXT: "¡Welcome to Ipsum!",
+      BTN_TEXT: "Back to top"
+    }
   }
 }

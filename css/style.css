@@ -764,6 +764,34 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center !important;
 }
 
+.btn-ask-footer:hover {
+  background: #333333;
+}
+
+
+.btn-ask-form {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff !important;
+  background-color: #0398ab;
+  border-width: 0;
+  width: 133px;
+  text-align: center !important;
+}
+
+.btn-ask-form:hover {
+  background: #333333;
+}
+
+
 .rrss-icons-styles{
   text-align: right;
 }
@@ -788,9 +816,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 
-.btn-ask-footer:hover {
-  background: #333333;
-}
+
 
 
 
@@ -1522,4 +1548,203 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #footer .footer-links a:hover {
   color: #1dc8cd;
+}
+
+
+/* Modal */
+.ususcroll {
+  overflow: hidden;
+}
+.dialog {
+  z-index: 999999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: calc(100%);
+  height: auto!important;
+  background: #fff;
+}
+.dialog[ng-cloak] {
+  display: none;
+}
+.dialog .content-dialog {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.topright {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+.bottomright {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+
+.fade-in {
+  animation: fadeIn ease 0.5s;
+  -webkit-animation: fadeIn ease 0.5s;
+  -moz-animation: fadeIn ease 0.5s;
+  -o-animation: fadeIn ease 0.5s;
+  -ms-animation: fadeIn ease 0.5s;
+}
+
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+* { box-sizing:border-box; }
+
+/* basic stylings ------------------------------------------ */
+
+
+
+.footer 	{ text-align:center; }
+.footer a  { color:#53B2C8; }
+
+/* form starting stylings ------------------------------- */
+.group 			  {
+  position:relative;
+  margin-bottom:45px;
+}
+input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width: 63%;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+label 				 {
+  color:#999;
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#999;
+}
+
+
+.step-form-btn{
+  border-width: 0px;
+  background-color: #005578;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width: 63%; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px;
+  width:0;
+  bottom:1px;
+  position:absolute;
+  background:#00a5ba;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%;
+  width:100px;
+  top:25%;
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
 }

@@ -21,6 +21,8 @@
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="lib/aos/aos.css" rel="stylesheet">
   <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
   <!-- Main Stylesheet File -->
@@ -29,300 +31,391 @@
 </head>
 
 <body ng-controller="mainApp">
-
-  <!--==========================
-    Header
-  ============================-->
-  <header id="header">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <a>
-            <img src="img/ipsum/logo.png" style="max-height: 80px;" /></img>
-          </a>
-        </div>
-        <div class="col language-selector">
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              {{ page_texts.TOP_SECTOR.LANGUAGE_SELECTOR }}
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a href="" class="dropdown-item" ng-click="changeLanguage('es')">Español</a>
-              <a href="" class="dropdown-item" ng-click="changeLanguage('en')">English</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header><!-- #header -->
-
-  <!--==========================
-    Intro Section
-  ============================-->
-  <video autoplay muted loop id="back-video">
-    <source src="img/ipsum/vids/video.mp4" type="video/mp4">
-  </video>
-  <section id="intro">
-    <div class="intro-text">
-      <h2>{{ page_texts.TOP_SECTOR.TITLE_TEXT }}</h2>
-      <div class="divider div-transparent"></div>
-      <p>{{ page_texts.TOP_SECTOR.BODY_TEXT }}</p>
-      <a href="" class="btn-get-started scrollto">{{ page_texts.TOP_SECTOR.BTN_TEXT }}</a>
-    </div>
-
-  </section><!-- #intro -->
-
-  <main id="main" style="width: 100%;">
+  <fullscreen-dialog>
     <!--==========================
-      Product Featuress Section
+      Header
     ============================-->
-    <section id="features">
+    <header id="header">
       <div class="container">
-        <div class="section-header" data-aos="fade" data-aos-duration="1000" style="margin-bottom: 95px;">
-          <h3 class="section-title">{{ page_texts.ABOUT_SECTOR.TITLE_TEXT }}</h3>
-          <div class="divider div-transparent"></div>
-        </div>
-
-
-
         <div class="row">
-
-          <div class="col-lg-4 col-md-5 features-img">
-            <img src="img/ipsum/img_one.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back">
+          <div class="col">
+            <a>
+              <img src="img/ipsum/logo.png" style="max-height: 80px;" /></img>
+            </a>
           </div>
-
-          <div class="col-lg-8 col-md-7 ">
-
-            <div class="row">
-              <div class="col-lg-3 col-md-3 box" data-aos="fade-left">
-              </div>
-              <div class="col-lg-9 col-md-9 box" data-aos="fade-left" data-aos-delay="100">
-                <h4 class="title">
-                    {{ page_texts.ABOUT_SECTOR.QUESTION_TEXT }}
-                </h4>
-                <p class="description" align="justify">
-                  {{ page_texts.ABOUT_SECTOR.ANSWER_TEXT }}
-                </p>
-                <div style="text-align: right;">
-                  <a href="" class="btn-ask-demo">
-                    {{ page_texts.ABOUT_SECTOR.BTN_TEXT }}
-                  </a>
-                </div>
-
-              </div>
-              <div class="col-lg-6 col-md-6 box" data-aos="fade-left" data-aos-delay="200">
-              </div>
-              <div class="col-lg-6 col-md-6 box" data-aos="fade-left" data-aos-delay="300">
+          <div class="col language-selector">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ page_texts.TOP_SECTOR.LANGUAGE_SELECTOR }}
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a href="" class="dropdown-item" ng-click="changeLanguage('es')">Español</a>
+                <a href="" class="dropdown-item" ng-click="changeLanguage('en')">English</a>
               </div>
             </div>
-
           </div>
-
         </div>
-
       </div>
-
-    </section><!-- #features -->
+    </header><!-- #header -->
 
     <!--==========================
-      Product Advanced Featuress Section
+      Intro Section
     ============================-->
-    <section id="advanced-features" style="background-color: #333">
+    <video autoplay muted loop id="back-video">
+      <source src="img/ipsum/vids/video.mp4" type="video/mp4">
+    </video>
+    <section id="intro">
+      <div class="intro-text">
+        <h2>{{ page_texts.TOP_SECTOR.TITLE_TEXT }}</h2>
+        <div class="divider div-transparent"></div>
+        <p>{{ page_texts.TOP_SECTOR.BODY_TEXT }}</p>
+        <a href="" ng-click="showDialog()" class="btn-get-started scrollto">{{ page_texts.TOP_SECTOR.BTN_TEXT }}</a>
+      </div>
 
-      <div class="features-row section-bg specs-background">
+    </section><!-- #intro -->
+
+    <main id="main" style="width: 100%;">
+      <!--==========================
+        Product Featuress Section
+      ============================-->
+      <section id="features">
         <div class="container">
-          <div class="row">
-
-            <div class="col-lg-12 col-md-12 ">
-
-              <div class="row specs-container">
-                <div class="col-lg-4 col-md-4 box" data-aos="fade-left" data-aos-delay="100">
-                  <div class="imgs-description-container">
-                    <img src="img/ipsum/img_ritmica.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description">
-                  </div>
-                  <br>
-                  <h4 class="title specs-title">
-                    <a>
-                      {{ page_texts.SPECS.PROGRA.TITLE_TEXT }}
-                    </a>
-                  </h4>
-                  <p class="description specs-description">
-                    {{ page_texts.SPECS.PROGRA.BODY_TEXT }}
-                  </p>
-                </div>
-
-                <div class="col-lg-4 col-md-4 box" data-aos="fade-left" data-aos-delay="200">
-                  <div class="imgs-description-container">
-                    <img src="img/ipsum/img_protocolos.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description">
-                  </div>
-                  <br>
-                  <h4 class="title specs-title">
-                    <a>
-                      {{ page_texts.SPECS.PROTO.TITLE_TEXT }}
-                    </a>
-                  </h4>
-                  <p class="description specs-description">
-                    {{ page_texts.SPECS.PROTO.BODY_TEXT }}
-                  </p>
-                </div>
-
-                <div class="col-lg-4 col-md-4 box" data-aos="fade-left" data-aos-delay="300">
-                  <div class="imgs-description-container">
-                    <img src="img/ipsum/img_bim.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description">
-                  </div>
-                  <br>
-                  <h4 class="title specs-title">
-                    <a>
-                      {{ page_texts.SPECS.BIM.TITLE_TEXT }}
-                    </a>
-                  </h4>
-                  <p class="description specs-description">
-                    {{ page_texts.SPECS.BIM.BODY_TEXT }}
-                  </p>
-                </div>
-              </div>
-
-
-            </div>
-
+          <div class="section-header" data-aos="fade" data-aos-duration="1000" style="margin-bottom: 95px;">
+            <h3 class="section-title">{{ page_texts.ABOUT_SECTOR.TITLE_TEXT }}</h3>
+            <div class="divider div-transparent"></div>
           </div>
 
-        </div>
-      </div>
 
 
-
-      <div class="features-row section-bg integration-soft-section">
-
-      </div>
-
-      <div class="container over-footer-integration">
           <div class="row">
 
-            <div class="col-lg-12 col-md-12 ">
-
-              <div class="row integration-soft-text">
-                <div class="col-lg-5 col-md-5 box" data-aos="fade-left" data-aos-delay="100">
-                  <h4 class="title integration-title">
-                    <a>
-                      {{ page_texts.INTEGRATION.TITLE_TEXT }}
-                    </a>
-                  </h4>
-                  <p class="description integration-description">
-                    {{ page_texts.INTEGRATION.BODY_TEXT }}
-                  </p>
-                </div>
-
-                <div class="col-lg-3 col-md-3 box" data-aos="fade-left" data-aos-delay="200">
-                </div>
-
-                <div class="col-lg-4 col-md-4 box" data-aos="fade-left" data-aos-delay="300">
-                </div>
-              </div>
-
-
+            <div class="col-lg-4 col-md-5 features-img">
+              <img src="img/ipsum/img_one.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back">
             </div>
 
-          </div>
-      </div>
-
-    </section><!-- #advanced-features -->
-
-
-
-    <!--==========================
-      Contact Section
-    ============================-->
-    <section id="contact" class="contact-section-style">
-      <div class="container">
-        <div class="row footer-detail" data-aos="fade-left">
-
-          <div class="row">
-
-            <div class="col-lg-12 col-md-12 footer-ipsum-container">
+            <div class="col-lg-8 col-md-7 ">
 
               <div class="row">
-                <div class="col-lg-4 col-md-4 box" data-aos="fade-left" data-aos-delay="100">
-                  <div class="img-footer-ipsum-container">
-                    <img src="img/ipsum/logo-blanco.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="img-footer-ipsum">
-                  </div>
-                  <p class="description specs-description">
-                    {{ page_texts.FOOTER.BODY_TEXT }}
-                  </p>
+                <div class="col-lg-3 col-md-3 box" data-aos="fade-left">
                 </div>
-
-
-
-
-                <div class="col-lg-4 col-md-4 box contact-container-conf" data-aos="fade-left" data-aos-delay="200">
-                <h4 class="title contact-info-title">
-                  <a style="font-weight: 600;">
-                    {{ page_texts.FOOTER.CONTACT }}
-                  </a>
-                </h4>
-                  <p class="description footer-contact-info">
-                    contacto@ipsumapp.co
+                <div class="col-lg-9 col-md-9 box" data-aos="fade-left" data-aos-delay="100">
+                  <h4 class="title">
+                      {{ page_texts.ABOUT_SECTOR.QUESTION_TEXT }}
+                  </h4>
+                  <p class="description" align="justify">
+                    {{ page_texts.ABOUT_SECTOR.ANSWER_TEXT }}
                   </p>
-                  <br>
-                  <p class="description footer-contact-info">
-                    +56 9 9547 8087
-                  </p>
-                  <br>
-                  <p class="description footer-contact-info">
-                    Av. Providencia 1208, Edificio Pamplona, Piso 21, Oficina 2101.
-                  </p>
-                  <br>
-                  <p class="description footer-contact-info">
-                    Providencia, Santiago, Chile.
-                  </p>
-                  <br>
-                  <div style="text-align: left; margin-left: -11px">
-                    <a href="" class="btn-ask-footer">
-                      {{ page_texts.FOOTER.BTN_TEXT }}
+                  <div style="text-align: right;">
+                    <a href="" ng-click="showDialog()" class="btn-ask-demo">
+                      {{ page_texts.ABOUT_SECTOR.BTN_TEXT }}
                     </a>
                   </div>
 
                 </div>
-
-                <div class="col-lg-4 col-md-4 box contact-container-conf" data-aos="fade-left" data-aos-delay="300">
-                  <div class="rrss-icons-styles">
-                    <a href="https://play.google.com/store/apps/developer?id=Ipsum%20SpA&hl=en" target="_blank" class="link-android-specific-style">
-                      <img src="img/ipsum/android_store.png" alt="" class="stores-img">
-                    </a>
-                    <br>
-                    <a href="https://itunes.apple.com/us/app/proplanner/id1436981907?ls=1&mt=8" target="_blank">
-                      <img src="img/ipsum/apple_store.png" alt="" class="stores-img">
-                    </a>
-
-                    <br>
-                    <br>
-                    <a href="https://www.facebook.com/ipsumapp/" target="_blank">
-                      <img src="img/ipsum/fb_logo.png" alt="" class="rrss-styles">
-                    </a>
-                    <a href="https://www.instagram.com/ipsumapp/" target="_blank">
-                      <img src="img/ipsum/linkedin_logo.png" alt="" class="rrss-styles">
-                    </a>
-                    <a href="https://www.linkedin.com/company/ipsumapp" target="_blank">
-                      <img src="img/ipsum/instagram_logo.png" alt="" class="rrss-styles">
-                    </a>
-
-
-                  </div>
+                <div class="col-lg-6 col-md-6 box" data-aos="fade-left" data-aos-delay="200">
+                </div>
+                <div class="col-lg-6 col-md-6 box" data-aos="fade-left" data-aos-delay="300">
                 </div>
               </div>
-
 
             </div>
 
           </div>
 
+        </div>
 
+      </section><!-- #features -->
+
+      <!--==========================
+        Product Advanced Featuress Section
+      ============================-->
+      <section id="advanced-features" style="background-color: #333">
+
+        <div class="features-row section-bg specs-background">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-lg-12 col-md-12 ">
+
+                <div class="row specs-container">
+                  <div class="col-lg-4 col-md-4 box" data-aos="fade-left" data-aos-delay="100">
+                    <div class="imgs-description-container">
+                      <img src="img/ipsum/img_ritmica.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description">
+                    </div>
+                    <br>
+                    <h4 class="title specs-title">
+                      <a>
+                        {{ page_texts.SPECS.PROGRA.TITLE_TEXT }}
+                      </a>
+                    </h4>
+                    <p class="description specs-description">
+                      {{ page_texts.SPECS.PROGRA.BODY_TEXT }}
+                    </p>
+                  </div>
+
+                  <div class="col-lg-4 col-md-4 box" data-aos="fade-left" data-aos-delay="200">
+                    <div class="imgs-description-container">
+                      <img src="img/ipsum/img_protocolos.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description">
+                    </div>
+                    <br>
+                    <h4 class="title specs-title">
+                      <a>
+                        {{ page_texts.SPECS.PROTO.TITLE_TEXT }}
+                      </a>
+                    </h4>
+                    <p class="description specs-description">
+                      {{ page_texts.SPECS.PROTO.BODY_TEXT }}
+                    </p>
+                  </div>
+
+                  <div class="col-lg-4 col-md-4 box" data-aos="fade-left" data-aos-delay="300">
+                    <div class="imgs-description-container">
+                      <img src="img/ipsum/img_bim.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description">
+                    </div>
+                    <br>
+                    <h4 class="title specs-title">
+                      <a>
+                        {{ page_texts.SPECS.BIM.TITLE_TEXT }}
+                      </a>
+                    </h4>
+                    <p class="description specs-description">
+                      {{ page_texts.SPECS.BIM.BODY_TEXT }}
+                    </p>
+                  </div>
+                </div>
+
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <div class="features-row section-bg integration-soft-section">
 
         </div>
-      </div>
-    </section><!-- #contact -->
 
-  </main>
+        <div class="container over-footer-integration">
+            <div class="row">
+
+              <div class="col-lg-12 col-md-12 ">
+
+                <div class="row integration-soft-text">
+                  <div class="col-lg-5 col-md-5 box" data-aos="fade-left" data-aos-delay="100">
+                    <h4 class="title integration-title">
+                      <a>
+                        {{ page_texts.INTEGRATION.TITLE_TEXT }}
+                      </a>
+                    </h4>
+                    <p class="description integration-description">
+                      {{ page_texts.INTEGRATION.BODY_TEXT }}
+                    </p>
+                  </div>
+
+                  <div class="col-lg-3 col-md-3 box" data-aos="fade-left" data-aos-delay="200">
+                  </div>
+
+                  <div class="col-lg-4 col-md-4 box" data-aos="fade-left" data-aos-delay="300">
+                  </div>
+                </div>
+
+
+              </div>
+
+            </div>
+        </div>
+
+      </section><!-- #advanced-features -->
+
+
+
+      <!--==========================
+        Contact Section
+      ============================-->
+      <section id="contact" class="contact-section-style">
+        <div class="container">
+          <div class="row footer-detail" data-aos="fade-left">
+
+            <div class="row">
+
+              <div class="col-lg-12 col-md-12 footer-ipsum-container">
+
+                <div class="row">
+                  <div class="col-lg-4 col-md-4 box" data-aos="fade-left" data-aos-delay="100">
+                    <div class="img-footer-ipsum-container">
+                      <img src="img/ipsum/logo-blanco.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="img-footer-ipsum">
+                    </div>
+                    <p class="description specs-description">
+                      {{ page_texts.FOOTER.BODY_TEXT }}
+                    </p>
+                  </div>
+
+
+
+
+                  <div class="col-lg-4 col-md-4 box contact-container-conf" data-aos="fade-left" data-aos-delay="200">
+                  <h4 class="title contact-info-title">
+                    <a style="font-weight: 600;">
+                      {{ page_texts.FOOTER.CONTACT }}
+                    </a>
+                  </h4>
+                    <p class="description footer-contact-info">
+                      contacto@ipsumapp.co
+                    </p>
+                    <br>
+                    <p class="description footer-contact-info">
+                      +56 9 9547 8087
+                    </p>
+                    <br>
+                    <p class="description footer-contact-info">
+                      Av. Providencia 1208, Edificio Pamplona, Piso 21, Oficina 2101.
+                    </p>
+                    <br>
+                    <p class="description footer-contact-info">
+                      Providencia, Santiago, Chile.
+                    </p>
+                    <br>
+                    <div style="text-align: left; margin-left: -11px">
+                      <a href="" ng-click="showDialog()" class="btn-ask-footer">
+                        {{ page_texts.FOOTER.BTN_TEXT }}
+                      </a>
+                    </div>
+
+                  </div>
+
+                  <div class="col-lg-4 col-md-4 box contact-container-conf" data-aos="fade-left" data-aos-delay="300">
+                    <div class="rrss-icons-styles">
+                      <a href="https://play.google.com/store/apps/developer?id=Ipsum%20SpA&hl=en" target="_blank" class="link-android-specific-style">
+                        <img src="img/ipsum/android_store.png" alt="" class="stores-img">
+                      </a>
+                      <br>
+                      <br>
+                      <a href="https://itunes.apple.com/us/app/proplanner/id1436981907?ls=1&mt=8" target="_blank">
+                        <img src="img/ipsum/apple_store.png" alt="" class="stores-img" style="margin-top: -20px;">
+                      </a>
+
+                      <br>
+                      <br>
+                      <a href="https://www.facebook.com/ipsumapp/" target="_blank">
+                        <img src="img/ipsum/fb_logo.png" alt="" class="rrss-styles">
+                      </a>
+                      <a href="https://www.instagram.com/ipsumapp/" target="_blank">
+                        <img src="img/ipsum/linkedin_logo.png" alt="" class="rrss-styles">
+                      </a>
+                      <a href="https://www.linkedin.com/company/ipsumapp" target="_blank">
+                        <img src="img/ipsum/instagram_logo.png" alt="" class="rrss-styles">
+                      </a>
+
+
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+
+            </div>
+
+
+
+          </div>
+        </div>
+      </section><!-- #contact -->
+
+    </main>
+
+    <!-- #modal form -->
+    <div class="dialog fade-in" ng-show="isPanelVisible" ng-clock>
+      <div class="topright">
+        <a href="" ng-click="hideDialog()">
+          <i class="material-icons w3-xxlarge" style="color: #333;">close</i>
+        </a>
+      </div>
+      <div class="bottomright">
+
+        <a href="" ng-click="nextStep()">
+          <i class="material-icons w3-xxlarge" style="color: #333;">keyboard_arrow_up</i>
+        </a>
+
+        <a href="" ng-click="backStep()">
+          <i class="material-icons w3-xxlarge" style="color: #333;">keyboard_arrow_down</i>
+        </a>
+      </div>
+
+
+      <!-- FORM -->
+      <div class="content-dialog">
+        <div class="row">
+          <div class="col">
+            <img src="img/ipsum/logo.png" alt="" style="max-width: 180px;">
+          </div>
+        </div>
+
+        <div ng-if="steps[0]" class="fade-in">
+          <div class="row">
+            <div class="col">
+              {{ page_texts.FORM.STEP_ONE.NORMAL_TEXT }}
+              <b>{{ page_texts.FORM.STEP_ONE.BOLD_TEXT }}</b>
+
+            </div>
+          </div>
+          <form class="row">
+            <div class="col">
+              <div class="group">
+                <input ng-model="contactForm.name" placeholder="{{ page_texts.FORM.STEP_ONE.PLACEHOLDER_TEXT }}" type="text" required style="margin:0 auto;">
+                <div class="highlight" style="margin:0 auto;"></div>
+                <div class="bar" style="margin:1px auto;"></div>
+              </div>
+            </div>
+          </form>
+
+          <div class="row">
+            <div class="col-10" style="text-align: right;">
+                <a href="" ng-click="nextStep(0)" class="btn-ask-form">
+                  {{ page_texts.FORM.STEP_ONE.BTN_TEXT }}
+                </a>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <div ng-if="steps[1]" class="fade-in">
+          <div class="row">
+            <div class="col">
+              {{ page_texts.FORM.STEP_TWO.NORMAL_TEXT }}
+              <b>{{ page_texts.FORM.STEP_TWO.BOLD_TEXT }}</b>
+
+            </div>
+          </div>
+          <form class="row">
+            <div class="col">
+              <div class="group">
+                <input ng-model="contactForm.email" placeholder="{{ page_texts.FORM.STEP_TWO.PLACEHOLDER_TEXT }}" type="text" required style="margin:0 auto;">
+                <div class="highlight" style="margin:0 auto;"></div>
+                <div class="bar" style="margin:1px auto;"></div>
+              </div>
+            </div>
+          </form>
+
+          <div class="row">
+            <div class="col-10" style="text-align: right;">
+                <a href="" ng-click="nextStep(1)" class="btn-ask-form">
+                  {{ page_texts.FORM.STEP_TWO.BTN_TEXT }}
+                </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </fullscreen-dialog>
 
 
 
@@ -343,7 +436,6 @@
   <script src="lib/superfish/hoverIntent.js"></script>
   <script src="lib/superfish/superfish.min.js"></script>
   <script src="lib/magnific-popup/magnific-popup.min.js"></script>
-
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>

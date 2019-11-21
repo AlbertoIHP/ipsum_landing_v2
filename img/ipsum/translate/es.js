@@ -34,5 +34,40 @@ var es = {
     BODY_TEXT: 'Una empresa chilena nacida el 2014, con la misión de aportar a la mejora en la productividad de la industria nacional e internacional, buscando lograr un impacto tanto económico como social, aportando asi a la creacion de verdaderas "smart cities".',
     CONTACT: 'Contacto',
     BTN_TEXT: "Agenda tu hora"
+  },
+  FORM: {
+    STEP_ONE: {
+      NORMAL_TEXT: "Cuéntanos de ti, ",
+      BOLD_TEXT: "¿Cuál es tu nombre completo?:",
+      PLACEHOLDER_TEXT: "Escribe aquí tu respuesta...",
+      BTN_TEXT: "Continuar"
+    },
+    STEP_TWO: {
+      NORMAL_TEXT: "Queremos contactarte, ",
+      BOLD_TEXT: "Ingresa tu correo electrónico:",
+      PLACEHOLDER_TEXT: "Escribe aquí tu respuesta...",
+      BTN_TEXT: "Continuar"
+    },
+    STEP_THREE: {
+      OP_ONE: "Construcción",
+      OP_TWO: "Inmobiliaria",
+      OP_THREE: "Minería",
+      OP_FOUR: "Montaje",
+      OP_FIVE: "Infraestructura",
+      OP_SIX: "Otro"
+    },
+    STEP_FOUR: {
+      NORMAL_TEXT: "Selecciona tu país e  ",
+      BOLD_TEXT: "Ingresa tu número de contacto:",
+      PLACEHOLDER_TEXT: "Escribe tu número...",
+      BTN_TEXT: "Continuar"
+    },
+    STEP_FINAL: {
+      TITLE_TEXT: "¡Muchas Gracias!",
+      BODY_TEXT: "Hemos recibido tu información y serás contactado por uno de nuestros especialistas en las siguientes ",
+      BOLD_TEXT: "24 hrs hábiles.",
+      BOTTOM_TEXT: "¡Bienvenido a Ipsum!",
+      BTN_TEXT: "Volver al Inicio"
+    }
   }
 }
