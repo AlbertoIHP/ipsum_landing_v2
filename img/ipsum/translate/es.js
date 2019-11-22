@@ -71,5 +71,21 @@ var es = {
       BOTTOM_TEXT: "¡Bienvenido a Ipsum!",
       BTN_TEXT: "Volver al Inicio"
     }
+  },
+  ERROR_TOAST: {
+    NAME: {
+      NON_FILLED: "Por favor ingresa tu nombre para poder continuar ..."
+    },
+    EMAIL: {
+      NON_FILLED: "Por favor ingresa tu email para poder continuar ...",
+      INVALID: "El email ingresado no es válido ..."
+    },
+    ITEM: {
+      NON_FILLED: "Por favor selecciona una categoria para continuar ..."
+    },
+    PHONE: {
+      NON_FILLED: "Por favor ingresa un numero de telefono ...",
+      INVALID: "El numero ingresado no es válido ..."
+    }
   }
 }

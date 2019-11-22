@@ -366,9 +366,11 @@
           <form class="row">
             <div class="col-10 offset-1">
               <div class="group">
-                <input ng-model="contactForm.name" placeholder="{{ page_texts.FORM.STEP_ONE.PLACEHOLDER_TEXT }}" type="text" required style="margin:0 auto;">
-                <div class="highlight" style="margin:0 auto;"></div>
-                <div class="bar" style="margin:1px auto;"></div>
+                <input class="input-form-style" ng-model="contactForm.name" placeholder="{{ page_texts.FORM.STEP_ONE.PLACEHOLDER_TEXT }}" type="text" required>
+                <div class="highlight" style="margin:0 auto;">
+                </div>
+                <div class="bar" style="margin:1px auto;">
+                </div>
               </div>
             </div>
           </form>
@@ -396,7 +398,7 @@
           <form class="row">
             <div class="col-10 offset-1">
               <div class="group">
-                <input ng-model="contactForm.email" placeholder="{{ page_texts.FORM.STEP_TWO.PLACEHOLDER_TEXT }}" type="text" required style="margin:0 auto;">
+                <input class="input-form-style" ng-model="contactForm.email" placeholder="{{ page_texts.FORM.STEP_TWO.PLACEHOLDER_TEXT }}" type="email" required>
                 <div class="highlight" style="margin:0 auto;"></div>
                 <div class="bar" style="margin:1px auto;"></div>
               </div>
@@ -429,40 +431,80 @@
         </div>
 
 
-        <div class="row">
-          <div class="col-8 offset-2">
+        <div class="row row-for-select-option">
+          <div class="col-6 offset-3">
             <div class="row">
-              <div class="col-4">
-                BOX-1
+              <div ng-click="selectItem(page_texts.FORM.STEP_THREE.OP_ONE)" class="col-4 px-1">
+                <div class="boxed">
+                  <a href="" class="fill-div">
+                    {{ page_texts.FORM.STEP_THREE.OP_ONE }}
+                  </a>
+                </div>
               </div>
-              <div class="col-4">
-                BOX-1
+              <div ng-click="selectItem(page_texts.FORM.STEP_THREE.OP_TWO)" class="col-4 px-1">
+                <div class="boxed">
+                  <a href="" class="fill-div">
+                    {{ page_texts.FORM.STEP_THREE.OP_TWO }}
+                  </a>
+                </div>
               </div>
-              <div class="col-4">
-                BOX-1
+              <div ng-click="selectItem(page_texts.FORM.STEP_THREE.OP_THREE)" class="col-4 px-1">
+                <div class="boxed">
+                  <a href="" class="fill-div">
+                    {{ page_texts.FORM.STEP_THREE.OP_THREE }}
+                  </a>
+                </div>
               </div>
-              <div class="w-100"></div>
-              <div class="col-4">
-                BOX-1
-              </div>
-              <div class="col-4">
-                BOX-1
-              </div>
-              <div class="col-4">
-                BOX-1
-              </div>
-
             </div>
           </div>
 
         </div>
 
+
+        <div class="row row-for-select-option">
+          <div class="col-6 offset-3">
+            <div class="row">
+              <div ng-click="selectItem(page_texts.FORM.STEP_THREE.OP_FOUR)" class="col-4 px-1">
+                <div class="boxed">
+                  <a href="" class="fill-div">
+                    {{ page_texts.FORM.STEP_THREE.OP_FOUR }}
+                  </a>
+                </div>
+              </div>
+              <div ng-click="selectItem(page_texts.FORM.STEP_THREE.OP_FIVE)" class="col-4 px-1">
+                <div class="boxed">
+                  <a href="" class="fill-div">
+                    {{ page_texts.FORM.STEP_THREE.OP_FIVE }}
+                  </a>
+                </div>
+              </div>
+              <div ng-click="selectItem(page_texts.FORM.STEP_THREE.OP_SIX)" class="col-4 px-1">
+                <div class="boxed">
+                  <a href="" class="fill-div">
+                    {{ page_texts.FORM.STEP_THREE.OP_SIX }}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
       </div>
+
 
 
       </div>
 
     </div>
+    <div class="row">
+      <div class="col-6 offset-3">
+        <div id="snackbar" ng-class="toastClass">{{ toastMessageText }}</div>
+      </div>
+
+    </div>
+
   </fullscreen-dialog>
 
 
