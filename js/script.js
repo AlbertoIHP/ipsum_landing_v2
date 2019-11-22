@@ -6,14 +6,10 @@ var app = angular.module('landing', [])
 app.directive('mainApp', function () {
   return {
 		controller: 'mainApp',
-		link: fsDialogLinker,
 		restrict : 'E',
 		replace: true,
 		transclude: true,
 		template : '<div class="dialog-container"><ng-transclude></ng-transclude></div>'
-	}
-	function fsDialogLinker(scope, element, attribute) {
-		 console.log("Se cerro el modal")
 	}
 })
 
@@ -21,31 +17,45 @@ app.controller('mainApp', mainAppFunction )
 
 
 
-
-
-
-
-async function mainAppFunction( $scope, $http )
+async function mainAppFunction( $scope, $http, $timeout )
 {
 
   //Language selector
   $scope.page_texts = es;
   $scope.changeLanguage = async function( language ){
-    $scope.page_texts = language === 'es' ? es : en
+    switch (language){
+      case 'es':
+        $scope.page_texts = es;
+        break;
+      case 'en':
+        $scope.page_texts = en;
+        break;
+      case 'pr':
+        $scope.page_texts = pr;
+        break;
+
+    }
   }
+
+
 
   //modal
   $scope.isPanelVisible = false;
 
   $scope.showDialog = function () {
+    $scope.changeClass = "fade-in"
     $scope.isPanelVisible = true;
   };
-  $scope.hideDialog = function () {
-    $scope.isPanelVisible = false;
-    $scope.steps = [ true, false, false, false, false ]
+  $scope.hideDialog = async () => {
+    $scope.changeClass = "fade-out"
+    $timeout(function () {
+      $scope.isPanelVisible = false;
+      $scope.steps = [ true, false, false, false, false ]
+    }, 450);
   };
-  $scope.steps = [ true, false, false, false, false ]
 
+
+  $scope.steps = [ true, false, false, false, false ]
 
 
   $scope.notSending = true
@@ -59,7 +69,7 @@ async function mainAppFunction( $scope, $http )
   //Functions
 
   $scope.nextStep = async function( el_index = $scope.currentStep ){
-    if( el_index < 1 ){
+    if( el_index < $scope.steps.length ){
       $scope.steps[el_index] = false;
       $scope.steps[(el_index+1)] = true;
       $scope.currentStep = (el_index+1)

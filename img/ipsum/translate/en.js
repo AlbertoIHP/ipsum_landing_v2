@@ -48,6 +48,8 @@ var en = {
       BTN_TEXT: "Continue"
     },
     STEP_THREE: {
+      NORMAL_TEXT: "What is the function of your company, ",
+      BOLD_TEXT: "Select your item:",
       OP_ONE: "Building",
       OP_TWO: "Real estate",
       OP_THREE: "Mining",

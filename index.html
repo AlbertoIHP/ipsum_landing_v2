@@ -51,6 +51,7 @@
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <a href="" class="dropdown-item" ng-click="changeLanguage('es')">Español</a>
                 <a href="" class="dropdown-item" ng-click="changeLanguage('en')">English</a>
+                <a href="" class="dropdown-item" ng-click="changeLanguage('pr')">Portugues</a>
               </div>
             </div>
           </div>
@@ -328,7 +329,7 @@
     </main>
 
     <!-- #modal form -->
-    <div class="dialog fade-in" ng-show="isPanelVisible" ng-clock>
+    <div ng-class="changeClass" class="dialog" ng-show="isPanelVisible" ng-clock>
       <div class="topright">
         <a href="" ng-click="hideDialog()">
           <i class="material-icons w3-xxlarge" style="color: #333;">close</i>
@@ -363,7 +364,7 @@
             </div>
           </div>
           <form class="row">
-            <div class="col">
+            <div class="col-10 offset-1">
               <div class="group">
                 <input ng-model="contactForm.name" placeholder="{{ page_texts.FORM.STEP_ONE.PLACEHOLDER_TEXT }}" type="text" required style="margin:0 auto;">
                 <div class="highlight" style="margin:0 auto;"></div>
@@ -393,7 +394,7 @@
             </div>
           </div>
           <form class="row">
-            <div class="col">
+            <div class="col-10 offset-1">
               <div class="group">
                 <input ng-model="contactForm.email" placeholder="{{ page_texts.FORM.STEP_TWO.PLACEHOLDER_TEXT }}" type="text" required style="margin:0 auto;">
                 <div class="highlight" style="margin:0 auto;"></div>
@@ -412,6 +413,53 @@
           </div>
         </div>
 
+
+
+
+
+
+      <div ng-if="steps[2]" class="fade-in">
+          <div class="row">
+            <div class="col">
+              {{ page_texts.FORM.STEP_THREE.NORMAL_TEXT }}
+              <b>
+                {{ page_texts.FORM.STEP_THREE.BOLD_TEXT }}
+              </b>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-8 offset-2">
+            <div class="row">
+              <div class="col-4">
+                BOX-1
+              </div>
+              <div class="col-4">
+                BOX-1
+              </div>
+              <div class="col-4">
+                BOX-1
+              </div>
+              <div class="w-100"></div>
+              <div class="col-4">
+                BOX-1
+              </div>
+              <div class="col-4">
+                BOX-1
+              </div>
+              <div class="col-4">
+                BOX-1
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
       </div>
 
     </div>
@@ -424,6 +472,7 @@
   <!-- Languages -->
   <script type="text/javascript" src="img/ipsum/translate/en.js"></script>
   <script type="text/javascript" src="img/ipsum/translate/es.js"></script>
+  <script type="text/javascript" src="img/ipsum/translate/pr.js"></script>
 
 
   <!-- JavaScript Libraries -->

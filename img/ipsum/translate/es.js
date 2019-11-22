@@ -49,6 +49,8 @@ var es = {
       BTN_TEXT: "Continuar"
     },
     STEP_THREE: {
+      NORMAL_TEXT: "A que se dedica tu empresa, ",
+      BOLD_TEXT: "Selecciona tu rubro:",
       OP_ONE: "Construcción",
       OP_TWO: "Inmobiliaria",
       OP_THREE: "Minería",
