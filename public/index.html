@@ -238,7 +238,7 @@
       ============================-->
       <section id="contact" class="contact-section-style">
         <div class="container">
-          <div class="row footer-detail" data-aos="fade-left">
+          <div class="row footer-detail footer-detail-container" data-aos="fade-left">
 
             <div class="row">
 
@@ -257,12 +257,12 @@
 
 
 
-                  <div class="col-lg-4 col-md-4 box contact-container-conf" data-aos="fade-left" data-aos-delay="200">
-                  <h4 class="title contact-info-title">
-                    <a style="font-weight: 600;">
-                      {{ page_texts.FOOTER.CONTACT }}
-                    </a>
-                  </h4>
+                  <div class="col-lg-4 col-md-4 box contact-container-conf footer-contact-container" data-aos="fade-left" data-aos-delay="200">
+                    <h4 class="title contact-info-title">
+                      <a style="font-weight: 600;">
+                        {{ page_texts.FOOTER.CONTACT }}
+                      </a>
+                    </h4>
                     <p class="description footer-contact-info">
                       contacto@ipsumapp.co
                     </p>
@@ -279,7 +279,7 @@
                       Providencia, Santiago, Chile.
                     </p>
                     <br>
-                    <div style="text-align: left; margin-left: -11px">
+                    <div class="btn-ask-footer-container">
                       <a href="" ng-click="showDialog()" class="btn-ask-footer">
                         {{ page_texts.FOOTER.BTN_TEXT }}
                       </a>
@@ -498,7 +498,7 @@
       </div>
 
     </div>
-    <div class="row">
+    <div class="row snack-container">
       <div class="col-6 offset-3">
         <div id="snackbar" ng-class="toastClass">{{ toastMessageText }}</div>
       </div>

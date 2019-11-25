@@ -148,6 +148,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+.btn-ask-footer-container{
+  text-align: left;
+  margin-left: -11px;
+}
+
+
 /*--------------------------------------------------------------
 # Intro Section
 --------------------------------------------------------------*/
@@ -172,6 +178,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 18%;
 }
 
+
+@media (max-width: 320px){
+  #intro {
+    height: 102vh;
+  }
+}
+
 #intro .intro-text {
   padding-top: 140px;
   text-align: center;
@@ -193,10 +206,27 @@ h1, h2, h3, h4, h5, h6 {
   #intro .intro-text {
     padding-top: 100px;
   }
+
+  .contact-info-title {
+    text-align: center !important;
+  }
+
+  .footer-contact-container{
+    text-align: center;
+  }
+
+  .btn-ask-footer-container{
+    text-align: center;
+  }
+}
+
+
+
+.snack-container{
+background: #333333;
 }
 
 #main {
-  position: absolute;
   z-index: 1;
 }
 
@@ -234,8 +264,21 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 500px){
   #intro .btn-get-started {
-    width: 75% !important;
+    width: 87% !important;
   }
+
+  .btn-ask-demo{
+    width: 100% !important;
+  }
+
+  #features{
+    height: 800px !important;
+  }
+
+  .specs-background {
+    height: 1255px !important;
+  }
+
 }
 
 
@@ -324,6 +367,10 @@ h1, h2, h3, h4, h5, h6 {
   }
   #intro .product-screens .product-screen-2, #intro .product-screens .product-screen-3 {
     display: none;
+  }
+
+  .footer-detail-container{
+    height: 740px;
   }
 }
 
@@ -879,6 +926,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .contact-section-style{
   background-color: #333;
   height: 275px;
+
 }
 
 #features .features-img img {
@@ -906,7 +954,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 
   #features {
-    height: 688px !important;
+    height: 688px;
   }
 
   .specs-container{
@@ -1800,6 +1848,11 @@ a.fill-div {
 
   .input-form-style{
     font-size: 13px;
+    width: 75%;
+  }
+
+  .bar{
+    width: 76%;
   }
 }
 
@@ -1864,10 +1917,33 @@ a.fill-div {
   text-align: center; /* Centered text */
   border-radius: 2px; /* Rounded borders */
   padding: 16px; /* Padding */
-  position: relative; /* Sit on top of the screen */
+  position: fixed; /* Sit on top of the screen */
   z-index: 99999999; /* Add a z-index if needed */
   bottom: 30px; /* 30px from the bottom */
-  
+  width: 51%;
+
+}
+
+@media (max-width: 805px){
+  #snackbar {
+    width: 47%;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 500px){
+  #snackbar {
+    width: 20%  ;
+
+  }
+}
+
+@media (max-width: 477px){
+  #snackbar{
+    min-width: 0px;
+    width: 43%;
+    font-size: 9px;
+  }
 }
 
 /* Show the snackbar when clicking on a button (class added with JavaScript) */
