@@ -501,6 +501,8 @@ background: #333333;
   margin: 0;
 }
 
+
+
 /* Mobile Nav Toggle */
 #mobile-nav-toggle {
   position: fixed;
@@ -524,6 +526,12 @@ background: #333333;
 @media (max-width: 768px) {
   #mobile-nav-toggle {
     display: inline;
+  }
+}
+
+@media (max-width: 519px){
+  .input-phone-style{
+    width: 100% !important;
   }
 }
 
@@ -1294,7 +1302,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #pricing .featured .get-started-btn {
   background: linear-gradient(45deg, #1de099, #1dc8cd);
 }
-
+phone
 /* Frequently Asked Questions Section
 --------------------------------*/
 #faq {
@@ -1807,6 +1815,37 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
   margin-top: 20px;
 }
 
+
+.select-country-styles{
+  width: 138%;
+}
+.flag-select-style{
+  position: relative;
+    top: -8px;
+    z-index: 0;
+    border-radius: 30px;
+    border-width: 1px;
+
+}
+
+
+.bar-flag-country{
+  padding: 1px;
+  margin: 0 !important;
+}
+
+.flag-common-style{
+  width: 75%;
+}
+
+.flag-container{
+  position: relative;
+  top: 19px;
+  left: -5px;
+  z-index: 2;
+}
+
+
 a.fill-div {
     display: block;
     height: 100%;
@@ -1818,6 +1857,69 @@ a.fill-div {
 
 .input-form-style{
   margin:0 auto;
+}
+
+
+@media( max-width: 806px){
+  .flag-select-style{
+    width: 174%;
+  }
+
+  .flag-container{
+    left: 7px;
+  }
+}
+
+@media( max-width: 614px ){
+  .flag-select-style{
+    width: 228%;
+  }
+
+  .flag-container{
+    left: 7px;
+  }
+}
+
+
+@media( max-width: 568px ){
+  .flag-select-style{
+    margin-left: -91%;
+    width: 326%;
+  }
+
+  .flag-container{
+    left: -4px;
+  }
+}
+
+@media( max-width: 490px ){
+  .flag-select-style{
+    margin-left: -311%;
+    width: 646%;
+  }
+
+  .flag-container{
+    left: -17px;
+  }
+}
+
+
+
+
+@media( max-width: 412px ){
+  .flag-select-style{
+    margin-left: -44px;
+    width: 60px;
+
+  }
+
+  .flag-container{
+    left: -27px;
+  }
+
+  .input-phone-style{
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 699px){

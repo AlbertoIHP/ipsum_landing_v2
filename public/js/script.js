@@ -20,6 +20,10 @@ app.controller('mainApp', mainAppFunction )
 async function mainAppFunction( $scope, $http, $timeout )
 {
 
+  $scope.codePhoneNumbers = codePhoneNumbers;
+  var actual_flag = ""
+  $scope.flagStyle = "flag-icon-cl"
+
   //Language selector
   $scope.page_texts = es;
   $scope.changeLanguage = async function( language ){
@@ -63,7 +67,7 @@ async function mainAppFunction( $scope, $http, $timeout )
   $scope.sended = false
   $scope.currentStep = 0
 
-  $scope.contactForm = { name: '', email: '', item: '', phone: '' }
+  $scope.contactForm = { name: 'Alberto Herrera Poza', email: 'a.herrera07@ufromail.cl', item: '', phone: '+56934940091' }
 
 
   //Functions
@@ -71,7 +75,12 @@ async function mainAppFunction( $scope, $http, $timeout )
   function checkEmail( email ){
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
-}
+  }
+
+  function checkNumber( number ){
+    var re = /[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}/
+    return re.test(String(number).toLowerCase())
+  }
 
 
 
@@ -107,9 +116,15 @@ async function mainAppFunction( $scope, $http, $timeout )
         }
         return true;
       case 3:
-        console.log("se debe verificar phone")
-        showToast($scope.page_texts.ERROR_TOAST.PHONE.NON_FILLED)
-        break;
+        if($scope.contactForm.phone == '' || $scope.contactForm.phone == undefined){
+            showToast($scope.page_texts.ERROR_TOAST.PHONE.NON_FILLED)
+            return false
+        } else if( !checkNumber( $scope.contactForm.phone ) ){
+          showToast($scope.page_texts.ERROR_TOAST.PHONE.INVALID)
+          return false
+        }
+        return true
+
 
     }
   }
@@ -141,7 +156,13 @@ async function mainAppFunction( $scope, $http, $timeout )
     }
   }
 
+  $scope.updateFlag = function() {
+    actual_flag = $scope.contactForm.phone
+    $scope.contactForm.phone = actual_flag.dial_code
+    $scope.flagStyle = "flag-icon-"+actual_flag.code.toLowerCase()
+    console.log(actual_flag)
 
+  }
 
 
   $scope.sendInfo = async function(){
