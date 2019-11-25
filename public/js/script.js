@@ -67,6 +67,14 @@ async function mainAppFunction( $scope, $http, $timeout )
 
 
   //Functions
+
+  function checkEmail( email ){
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+
+
   function showToast( text_to_show ) {
     $scope.toastMessageText = text_to_show
     $scope.toastClass = "show";
@@ -78,17 +86,26 @@ async function mainAppFunction( $scope, $http, $timeout )
   function checkForm( el_to_verify ){
     switch (el_to_verify) {
       case 0:
-        console.log("se debe verificar name")
-        showToast($scope.page_texts.ERROR_TOAST.NAME.NON_FILLED)
-        break;
+        if( $scope.contactForm.name == '' || $scope.contactForm.name == undefined){
+          showToast($scope.page_texts.ERROR_TOAST.NAME.NON_FILLED)
+          return false
+        }
+        return true;
       case 1:
-        console.log("se debe verificar email")
-        showToast($scope.page_texts.ERROR_TOAST.EMAIL.NON_FILLED)
-        break;
+        if( $scope.contactForm.email == '' || $scope.contactForm.email == undefined){
+          showToast($scope.page_texts.ERROR_TOAST.EMAIL.NON_FILLED)
+          return false
+        } else if ( !checkEmail( $scope.contactForm.email ) ){
+          showToast($scope.page_texts.ERROR_TOAST.EMAIL.INVALID)
+          return false
+        }
+        return true;
       case 2:
-        console.log("se debe verificar item")
-        showToast($scope.page_texts.ERROR_TOAST.ITEM.NON_FILLED)
-        break;
+        if( $scope.contactForm.item == '' || $scope.contactForm.item == undefined ){
+          showToast($scope.page_texts.ERROR_TOAST.ITEM.NON_FILLED)
+          return false
+        }
+        return true;
       case 3:
         console.log("se debe verificar phone")
         showToast($scope.page_texts.ERROR_TOAST.PHONE.NON_FILLED)
@@ -101,18 +118,17 @@ async function mainAppFunction( $scope, $http, $timeout )
 
   $scope.selectItem = async function( selected_item ){
     $scope.contactForm.item = selected_item;
-    console.log("Formulario: ",$scope.contactForm)
     $scope.nextStep(2)
   }
 
 
   $scope.nextStep = async function( el_index = $scope.currentStep ){
-    checkForm( el_index )
-
-    if( el_index < $scope.steps.length ){
-      $scope.steps[el_index] = false;
-      $scope.steps[(el_index+1)] = true;
-      $scope.currentStep = (el_index+1)
+    if(checkForm( el_index )){
+      if( el_index < $scope.steps.length ){
+        $scope.steps[el_index] = false;
+        $scope.steps[(el_index+1)] = true;
+        $scope.currentStep = (el_index+1)
+      }
     }
   }
 
