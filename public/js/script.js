@@ -67,7 +67,7 @@ async function mainAppFunction( $scope, $http, $timeout )
   $scope.sended = false
   $scope.currentStep = 0
 
-  $scope.contactForm = { name: 'Alberto Herrera Poza', email: 'a.herrera07@ufromail.cl', item: '', phone: '+56934940091' }
+  $scope.contactForm = { name: '', email: '', item: '', phone: '+569' }
 
 
   //Functions
