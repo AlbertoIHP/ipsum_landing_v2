@@ -73,7 +73,7 @@ var es = {
     },
     LOADING: {
       LOADING_TEXT: "Estamos enviando su información.",
-      BOLD_TEXT: "  Porfavor espere hasta que la peticion finalice."
+      BOLD_TEXT: "  Porfavor espere hasta que la petición finalice."
     }
   },
   ERROR_TOAST: {
@@ -93,6 +93,6 @@ var es = {
     }
   },
   ERROR_GENERAL: {
-    NON_SENDED_MAIL: "Lamentamos, mas sua solicitação não pôde ser feita, verifique sua conexão com a Internet ou tente novamente."
+    NON_SENDED_MAIL: "Lo sentimos, pero su solicitud pudo ser completada, verifique su conexión a Internet o intente nuevamente."
   }
 }
