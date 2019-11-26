@@ -70,6 +70,10 @@ var es = {
       BOLD_TEXT: "24 hrs hábiles.",
       BOTTOM_TEXT: "¡Bienvenido a Ipsum!",
       BTN_TEXT: "Volver al Inicio"
+    },
+    LOADING: {
+      LOADING_TEXT: "Estamos enviando su información.",
+      BOLD_TEXT: "  Porfavor espere hasta que la peticion finalice."
     }
   },
   ERROR_TOAST: {
@@ -87,5 +91,8 @@ var es = {
       NON_FILLED: "Por favor ingresa un numero de telefono ...",
       INVALID: "El numero ingresado no es válido ..."
     }
+  },
+  ERROR_GENERAL: {
+    NON_SENDED_MAIL: "Lamentamos, mas sua solicitação não pôde ser feita, verifique sua conexão com a Internet ou tente novamente."
   }
 }

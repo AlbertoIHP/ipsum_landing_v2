@@ -69,6 +69,10 @@ var en = {
       BOLD_TEXT: "24 business hours.",
       BOTTOM_TEXT: "¡Welcome to Ipsum!",
       BTN_TEXT: "Back to top"
+    },
+    LOADING: {
+      LOADING_TEXT: "We are sending your information.",
+      BOLD_TEXT: "  Please wait until the request ends."
     }
   },
   ERROR_TOAST: {
@@ -86,5 +90,8 @@ var en = {
       NON_FILLED: "Please enter a phone number ...",
       INVALID: "The number entered is not valid ..."
     }
+  },
+  ERROR_GENERAL: {
+    NON_SENDED_MAIL: "We are sorry but your request could not be made, verify your internet connection or try again."
   }
 }

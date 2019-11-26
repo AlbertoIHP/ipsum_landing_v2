@@ -70,6 +70,10 @@ var pr = {
       BOLD_TEXT: "24 horas úteis.",
       BOTTOM_TEXT: "¡bem-vindo a Ipsum!",
       BTN_TEXT: "Voltar ao início"
+    },
+    LOADING: {
+      LOADING_TEXT: "Estamos enviando suas informações.",
+      BOLD_TEXT: "  Aguarde até que a solicitação termine."
     }
   },
   ERROR_TOAST: {
@@ -87,5 +91,8 @@ var pr = {
       NON_FILLED: "Digite um número de telefone ...",
       INVALID: "O número digitado não é válido ..."
     }
+  },
+  ERROR_GENERAL: {
+    NON_SENDED_MAIL: "We are sorry but your request could not be made, verify your internet connection or try again."
   }
 }
