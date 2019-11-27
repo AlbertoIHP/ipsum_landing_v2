@@ -10,7 +10,7 @@
 body {
   background: #fff;
   color: #666666;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   overflow-x: hidden;
 }
 
@@ -172,6 +172,29 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
 }
 
+@media (min-height: 664px){
+  #back-video {
+    top: -415px !important;
+  }
+
+  #features{
+    padding: 125px 10% 0 10% !important;
+  }
+}
+
+@media (min-height: 720px){
+  #back-video {
+    top: -358px;
+  }
+
+  #features{
+    padding: 17px 10% 0 10% !important;
+  }
+
+  #intro{
+    margin-top: 12%;
+  }
+}
 
 #intro {
   width: 65%;
@@ -181,6 +204,72 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   margin-left: 18%;
 }
+
+
+@media (min-height: 818px){
+
+  #back-video {
+    top: -238px !important;
+  }
+  #intro{
+    height: 71vh !important;
+  }
+
+  #features{
+    padding: 64px 10% 0 10% !important;
+  }
+
+}
+
+
+
+
+
+
+@media (min-width: 319px) and (min-height: 565px){
+  #back-video {
+    top: -496px !important;
+  }
+}
+
+
+@media (min-width: 359px) and (min-height: 639px){
+  #back-video {
+    top: -504px !important;
+  }
+}
+
+@media (min-width: 374px) and (min-height: 665px){
+  #back-video {
+    top: -477px !important;
+  }
+}
+
+
+
+@media (min-width: 410px) and (min-height: 730px){
+  #back-video {
+    top: -363px !important;
+  }
+}
+
+
+@media (min-width: 374px) and (min-height: 810px){
+  #back-video {
+    top: -300px !important;
+  }
+}
+
+
+#intro {
+  width: 65%;
+  height: 90vh;
+  background: #33779300;
+  z-index: 1;
+  position: relative;
+  margin-left: 18%;
+}
+
 
 
 @media (max-width: 320px){
@@ -237,8 +326,8 @@ background: #333333;
 #intro h2 {
   margin: 30px 0 10px 0;
   padding: 0 15px;
-  font-size: 48px;
-  font-weight: 400;
+  font-size: 44px;
+  font-weight: 600;
   line-height: 56px;
   color: #fff;
 }
@@ -503,6 +592,10 @@ background: #333333;
 
 .nav-menu ul ul {
   margin: 0;
+}
+
+.ng-cloak {
+  display: none !important;
 }
 
 
@@ -2210,3 +2303,53 @@ input {
   text-align: left;
   padding-top: 20px;
 }
+
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #333333;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #333333 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+.center-init-loader {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px; /* margin is -0.5 * dimension */
+    margin-top: -25px;
+}​

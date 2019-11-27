@@ -11,8 +11,8 @@
   <!-- Favicons -->
   <link href="img/ipsum/favicon.png" rel="icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -39,9 +39,11 @@
 
 <body ng-controller="mainApp" ng-class="bodyMobileContainer">
 
+  <div ng-show="!isPageLoaded" class="center-init-loader" style="text-align: center;">
+    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+  </div>
 
-
-  <fullscreen-dialog>
+  <fullscreen-dialog class="ng-cloak" ng-show="isPageLoaded">
 
 
 
@@ -563,7 +565,7 @@
           <form class="row">
             <div class="col-10 offset-1">
               <div class="group">
-                <input autofocus ng-keypress="keyPressed($event, 0)" class="input-form-style" ng-model="contactForm.name" placeholder="{{ page_texts.FORM.STEP_ONE.PLACEHOLDER_TEXT }}" type="text" required>
+                <input ng-keypress="keyPressed($event, 0)" class="input-form-style" ng-model="contactForm.name" placeholder="{{ page_texts.FORM.STEP_ONE.PLACEHOLDER_TEXT }}" type="text" required>
                 <div class="highlight" style="margin:0 auto;">
                 </div>
                 <div class="bar" style="margin:1px auto;">
@@ -594,7 +596,7 @@
           <form class="row">
             <div class="col-10 offset-1">
               <div class="group">
-                <input autofocus ng-keypress="keyPressed($event, 1)" class="input-form-style" ng-model="contactForm.email" placeholder="{{ page_texts.FORM.STEP_TWO.PLACEHOLDER_TEXT }}" type="email" required>
+                <input ng-keypress="keyPressed($event, 1)" class="input-form-style" ng-model="contactForm.email" placeholder="{{ page_texts.FORM.STEP_TWO.PLACEHOLDER_TEXT }}" type="email" required>
                 <div class="highlight" style="margin:0 auto;"></div>
                 <div class="bar" style="margin:1px auto;"></div>
               </div>
@@ -711,7 +713,7 @@
 
             <div class="col-6">
               <div class="group">
-                <input autofocus ng-keypress="keyPressed($event, 3)" class="input-phone-style flag-common-style" ng-model="contactForm.phone" placeholder="{{ page_texts.FORM.STEP_FOUR.PLACEHOLDER_TEXT }}" type="phone" required pattern="^[+][0-9]+$" ng-pattern-restrict>
+                <input ng-keypress="keyPressed($event, 3)" class="input-phone-style flag-common-style" ng-model="contactForm.phone" placeholder="{{ page_texts.FORM.STEP_FOUR.PLACEHOLDER_TEXT }}" type="phone" required pattern="^[+][0-9]+$" ng-pattern-restrict>
                 <div class="highlight" style="margin:0 auto;"></div>
                 <div class="bar bar-flag-country flag-common-style" style="margin:1px auto;"></div>
               </div>
@@ -784,8 +786,6 @@
           </div>
         </div>
 
-
-
         <div ng-if="sending" class="fade-in">
           <div class="row">
             <div class="col">
@@ -802,9 +802,6 @@
             </div>
           </div>
         </div>
-
-
-
 
     </div>
 

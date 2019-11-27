@@ -41,6 +41,7 @@ async function mainAppFunction( $scope, $http, $timeout, deviceDetector )
   $scope.mobileOverFooterStyle = $scope.isMobile ? "over-over-footer" : ""
   $scope.mobileIntegrationContainer = $scope.isMobile ? "integration-mobile" : "non-mobile-integration"
   $scope.bodyMobileContainer = $scope.isMobile ? "body-mobile-container" : ""
+  $scope.isPageLoaded = true;
 
 
 
@@ -77,7 +78,6 @@ async function mainAppFunction( $scope, $http, $timeout, deviceDetector )
     $scope.changeClass = "fade-out"
     $timeout(function () {
       var actual_flag = ""; //To get a snapshot of the flag at the phone selector
-      $scope.codePhoneNumbers = codePhoneNumbers; //JSON of all code numbers for phone selector at the FORM
       $scope.flagStyle = "flag-icon-cl"; //Initial flag skin based on the Adobe XD Mock-up
       $scope.isPanelVisible = false; // Initial state for the modal
       $scope.steps = [ true, false, false, false, false ] // Initial state of form steps in modal
