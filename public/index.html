@@ -83,6 +83,9 @@
 
 
 
+
+
+
     <section id="intro">
       <div class="intro-text">
         <h2>{{ page_texts.TOP_SECTOR.TITLE_TEXT }}</h2>
@@ -184,7 +187,7 @@
 
           <div class="slideshow-container">
             <div class="slideshow-inner">
-              <div class="mySlides fade-in" style="display: block;">
+              <div class="mySlides fade-in" style="display: block;" ng-swipe-left="swipe(2)" ng-swipe-right="swipe(3)">
 
                 <div class="row">
                   <div class="col-4 offset-1">
@@ -207,7 +210,7 @@
 
               </div>
 
-              <div class="mySlides fade-in">
+              <div class="mySlides fade-in" ng-swipe-left="swipe(3)" ng-swipe-right="swipe(1)">
 
                 <div class="row">
                   <div class="col-4 offset-1">
@@ -229,7 +232,7 @@
                 </div>
               </div>
 
-              <div class="mySlides fade-in">
+              <div class="mySlides fade-in" ng-swipe-left="swipe(2)" ng-swipe-right="swipe(1)">
 
                 <div class="row">
                   <div class="col-4 offset-1">
@@ -834,6 +837,7 @@
   <script src="js/angular.js"></script>
   <script src="js/angular-device.js"></script>
   <script src="js/angular-restrict.js"></script>
+  <script src="js/angular-touch.js"></script>
   <script src="js/re-tree.js"></script>
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
@@ -845,6 +849,7 @@
   <script src="lib/magnific-popup/magnific-popup.min.js"></script>
 
   <!-- Template Main Javascript File -->
+  <script src="js/non-scoped-functions.js"></script>
   <script src="js/main.js"></script>
   <script src="js/script.js"></script>
   <script src="js/env.js"></script>

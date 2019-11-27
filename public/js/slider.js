@@ -40,6 +40,8 @@ function plusSlides(n){
 
 //Controls the current slide and resets interval if needed
 function currentSlide(n){
+  console.log("N for slide: ",n)
+  console.log("slideIndex: ",slideIndex)
   clearInterval(myTimer);
   myTimer = setInterval(function(){plusSlides(n + 1)}, customInterval);
   showSlides(slideIndex = n);
