@@ -48,9 +48,9 @@
 
     <!-- Header -->
     <header id="header">
-      <div class="container">
+      <div class="container" style="margin-right: 0px; margin-left: 0px; max-width: 99%;">
         <div class="row">
-          <div class="col">
+          <div class="col" style="position: relative; left: -20px;">
             <a>
               <img src="assets/img/ipsum/logo.png" style="max-height: 80px;" /></img>
             </a>
@@ -103,7 +103,7 @@
       <!--==========================
         Product Featuress Section
       ============================-->
-      <section id="features">
+      <section id="features" style="height: 782px">
         <div class="container">
           <div class="section-header" data-aos="fade" data-aos-duration="1000" style="margin-bottom: 95px;">
             <h3 class="section-title">{{ page_texts.ABOUT_SECTOR.TITLE_TEXT }}</h3>
@@ -126,10 +126,10 @@
                   <h4 class="title">
                       {{ page_texts.ABOUT_SECTOR.QUESTION_TEXT }}
                   </h4>
-                  <p class="description" align="justify">
+                  <p class="description" align="left">
                     {{ page_texts.ABOUT_SECTOR.ANSWER_TEXT }}
                   </p>
-                  <div style="text-align: right;">
+                  <div style="text-align: right; margin-top: 33px;">
                     <a href="" ng-click="showDialog()" class="btn-ask-demo">
                       {{ page_texts.ABOUT_SECTOR.BTN_TEXT }}
                     </a>
@@ -326,7 +326,10 @@
               <div class="col-lg-12 col-md-12" ng-class="mobileIntegrationContainer">
 
                 <div class="row integration-soft-text">
-                  <div class="col-lg-5 col-md-5 box" data-aos="fade-left" data-aos-delay="100">
+                  <div class="col-lg-3 col-md-3 box" data-aos="fade-left" data-aos-delay="100">
+                  </div>
+
+                  <div class="col-lg-6 col-md-6 box" data-aos="fade-left" data-aos-delay="200">
                     <h4 class="title integration-title">
                       <a>
                         {{ page_texts.INTEGRATION.TITLE_TEXT }}
@@ -337,10 +340,7 @@
                     </p>
                   </div>
 
-                  <div class="col-lg-3 col-md-3 box" data-aos="fade-left" data-aos-delay="200">
-                  </div>
-
-                  <div class="col-lg-4 col-md-4 box" data-aos="fade-left" data-aos-delay="300">
+                  <div class="col-lg-3 col-md-3 box" data-aos="fade-left" data-aos-delay="300">
                   </div>
                 </div>
 
@@ -400,7 +400,7 @@
 
       <section id="contact" class="contact-section-style">
 
-        <div ng-if="!isMobile" class="container">
+        <div ng-if="!isMobile" class="container" style="margin-left: 0px; margin-right: 0px; max-width: 100%;">
           <div  class="row footer-detail footer-detail-container" data-aos="fade-left">
             <div class="col-lg-12 col-md-12 footer-ipsum-container">
 
@@ -483,13 +483,13 @@
         </div>
 
 
-        <div ng-if="isMobile" class="container footer-mobile-container">
+        <div ng-if="isMobile" class="container footer-mobile-container" style="margin-left: 0px; margin-right: 0px; max-width: 100%;">
 
             <div class="row footer-detail footer-detail-container" data-aos="fade-left" style="height: 123px;">
-              <div class="col-5 offset-1 only-mobile-footer-content" style="text-align: left;">
-                <img src="assets/img/ipsum/logo-blanco.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="img-footer-ipsum" style="position: relative; top: -11px; max-width: 130px;">
+              <div class="col-5 only-mobile-footer-content" style="text-align: left;">
+                <img src="assets/img/ipsum/logo-blanco.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="img-footer-ipsum" style="position: relative; top: -11px; max-width: 130px; left: -15px;">
               </div>
-              <div class="col-6 only-mobile-footer-content" style="text-align: right; padding-top: 39px;">
+              <div class="col-7 only-mobile-footer-content" style="text-align: right; padding-top: 39px;">
                 <a href="https://play.google.com/store/apps/developer?id=Ipsum%20SpA&hl=en" target="_blank" class="link-android-specific-style">
                   <img src="assets/img/ipsum/android_store.png" alt="" class="stores-img" style=" margin-bottom: -1px;">
                 </a>

@@ -31,6 +31,7 @@
 
   .footer-mobile-container{
     height: 160px;
+    max-width: 100%;
   }
 
   .body-mobile-container{
@@ -136,8 +137,8 @@
 
 .dot {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
+    height: 8px;
+    width: 8px;
     margin: 0 2px;
     background-color: #bbb;
     border-radius: 50%;
