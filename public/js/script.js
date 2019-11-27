@@ -40,6 +40,7 @@ async function mainAppFunction( $scope, $http, $timeout, deviceDetector )
   $scope.isMobile = deviceDetector.isMobile()
   $scope.mobileOverFooterStyle = $scope.isMobile ? "over-over-footer" : ""
   $scope.mobileIntegrationContainer = $scope.isMobile ? "integration-mobile" : "non-mobile-integration"
+  $scope.bodyMobileContainer = $scope.isMobile ? "body-mobile-container" : ""
 
 
 
