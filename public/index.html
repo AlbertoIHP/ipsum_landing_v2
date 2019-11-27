@@ -9,36 +9,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
   <!-- Favicons -->
-  <link href="img/ipsum/favicon.png" rel="icon">
+  <link href="assets/img/ipsum/favicon.png" rel="icon">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="assets/css/roboto.css" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/aos/aos.css" rel="stylesheet">
-  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="assets/css/aos.css" rel="stylesheet">
+  <link href="assets/css/w3.css" rel="stylesheet">
+  <link href="assets/css/material-icons.css" rel="stylesheet">
 
 
   <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/slider.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/slider.css" rel="stylesheet">
 
 
   <!-- icons flags -->
 
-  <link href="css/docs.css" rel="stylesheet">
-  <link href="css/flag-icon.css" rel="stylesheet">
+  <link href="assets/css/docs.css" rel="stylesheet">
+  <link href="assets/css/flag-icon.css" rel="stylesheet">
 </head>
 
 <body ng-controller="mainApp" ng-class="bodyMobileContainer">
 
+
+  <!-- Init loader -->
   <div ng-show="!isPageLoaded" class="center-init-loader" style="text-align: center;">
     <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
   </div>
@@ -47,15 +46,13 @@
 
 
 
-    <!--==========================
-      Header
-    ============================-->
+    <!-- Header -->
     <header id="header">
       <div class="container">
         <div class="row">
           <div class="col">
             <a>
-              <img src="img/ipsum/logo.png" style="max-height: 80px;" /></img>
+              <img src="assets/img/ipsum/logo.png" style="max-height: 80px;" /></img>
             </a>
           </div>
           <div class="col language-selector">
@@ -72,20 +69,19 @@
           </div>
         </div>
       </div>
-    </header><!-- #header -->
+    </header>
 
-    <!--==========================
-      Intro Section
-    ============================-->
+
+    <!-- Video backgrounding init -->
     <video autoplay muted loop id="back-video">
-      <source src="img/ipsum/vids/video.mp4" type="video/mp4">
+      <source src="assets/video.mp4" type="video/mp4">
     </video>
 
 
 
 
 
-
+    <!-- Over video elements  -->
     <section id="intro">
       <div class="intro-text">
         <h2>{{ page_texts.TOP_SECTOR.TITLE_TEXT }}</h2>
@@ -94,16 +90,14 @@
         <a href="" ng-click="showDialog()" class="btn-get-started scrollto">{{ page_texts.TOP_SECTOR.BTN_TEXT }}</a>
       </div>
 
-    </section><!-- #intro -->
+    </section>
 
+
+
+
+
+    <!-- Complete main element of the landing -->
     <main id="main" class="mobile-main-container" style="width: 100%;">
-
-
-
-
-
-
-
 
 
       <!--==========================
@@ -111,25 +105,16 @@
       ============================-->
       <section id="features">
         <div class="container">
-
-
-
-
-
-
-
-
           <div class="section-header" data-aos="fade" data-aos-duration="1000" style="margin-bottom: 95px;">
             <h3 class="section-title">{{ page_texts.ABOUT_SECTOR.TITLE_TEXT }}</h3>
             <div class="divider div-transparent"></div>
           </div>
 
 
-
           <div class="row">
 
             <div class="col-lg-4 col-md-5 features-img">
-              <img src="img/ipsum/img_one.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back">
+              <img src="assets/img/ipsum/img_one.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back">
             </div>
 
             <div class="col-lg-8 col-md-7 ">
@@ -192,7 +177,7 @@
                 <div class="row">
                   <div class="col-4 offset-1">
                     <div class="imgs-description-container">
-                      <img src="img/ipsum/img_ritmica.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description img-slider-container">
+                      <img src="assets/img/ipsum/img_ritmica.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description img-slider-container">
                     </div>
                   </div>
 
@@ -215,7 +200,7 @@
                 <div class="row">
                   <div class="col-4 offset-1">
                     <div class="imgs-description-container">
-                      <img src="img/ipsum/img_protocolos.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description img-slider-container">
+                      <img src="assets/img/ipsum/img_protocolos.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description img-slider-container">
                     </div>
                   </div>
 
@@ -237,7 +222,7 @@
                 <div class="row">
                   <div class="col-4 offset-1">
                     <div class="imgs-description-container">
-                      <img src="img/ipsum/img_bim.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description img-slider-container">
+                      <img src="assets/img/ipsum/img_bim.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description img-slider-container">
                     </div>
                   </div>
 
@@ -277,7 +262,7 @@
                 <div class="row specs-container">
                   <div class="col-lg-4 col-md-4 box" data-aos="fade-left" data-aos-delay="100">
                     <div class="imgs-description-container">
-                      <img src="img/ipsum/img_ritmica.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description">
+                      <img src="assets/img/ipsum/img_ritmica.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description">
                     </div>
                     <br>
                     <h4 class="title specs-title">
@@ -292,7 +277,7 @@
 
                   <div class="col-lg-4 col-md-4 box" data-aos="fade-left" data-aos-delay="200">
                     <div class="imgs-description-container">
-                      <img src="img/ipsum/img_protocolos.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description">
+                      <img src="assets/img/ipsum/img_protocolos.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description">
                     </div>
                     <br>
                     <h4 class="title specs-title">
@@ -307,7 +292,7 @@
 
                   <div class="col-lg-4 col-md-4 box" data-aos="fade-left" data-aos-delay="300">
                     <div class="imgs-description-container">
-                      <img src="img/ipsum/img_bim.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description">
+                      <img src="assets/img/ipsum/img_bim.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description">
                     </div>
                     <br>
                     <h4 class="title specs-title">
@@ -422,7 +407,7 @@
               <div class="row">
                 <div class="col-lg-4 col-md-4 box" data-aos="fade-left" data-aos-delay="100">
                   <div class="img-footer-ipsum-container">
-                    <img src="img/ipsum/logo-blanco.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="img-footer-ipsum">
+                    <img src="assets/img/ipsum/logo-blanco.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="img-footer-ipsum">
                   </div>
                   <p class="description specs-description">
                     {{ page_texts.FOOTER.BODY_TEXT }}
@@ -465,24 +450,24 @@
                 <div class="col-lg-4 col-md-4 box contact-container-conf" data-aos="fade-left" data-aos-delay="300">
                   <div class="rrss-icons-styles">
                     <a href="https://play.google.com/store/apps/developer?id=Ipsum%20SpA&hl=en" target="_blank" class="link-android-specific-style">
-                      <img src="img/ipsum/android_store.png" alt="" class="stores-img">
+                      <img src="assets/img/ipsum/android_store.png" alt="" class="stores-img">
                     </a>
                     <br>
                     <br>
                     <a href="https://itunes.apple.com/us/app/proplanner/id1436981907?ls=1&mt=8" target="_blank">
-                      <img src="img/ipsum/apple_store.png" alt="" class="stores-img" style="margin-top: -20px;">
+                      <img src="assets/img/ipsum/apple_store.png" alt="" class="stores-img" style="margin-top: -20px;">
                     </a>
 
                     <br>
                     <br>
                     <a href="https://www.facebook.com/ipsumapp/" target="_blank">
-                      <img src="img/ipsum/fb_logo.png" alt="" class="rrss-styles">
+                      <img src="assets/img/ipsum/fb_logo.png" alt="" class="rrss-styles">
                     </a>
                     <a href="https://www.instagram.com/ipsumapp/" target="_blank">
-                      <img src="img/ipsum/linkedin_logo.png" alt="" class="rrss-styles">
+                      <img src="assets/img/ipsum/linkedin_logo.png" alt="" class="rrss-styles">
                     </a>
                     <a href="https://www.linkedin.com/company/ipsumapp" target="_blank">
-                      <img src="img/ipsum/instagram_logo.png" alt="" class="rrss-styles">
+                      <img src="assets/img/ipsum/instagram_logo.png" alt="" class="rrss-styles">
                     </a>
 
 
@@ -502,16 +487,16 @@
 
             <div class="row footer-detail footer-detail-container" data-aos="fade-left" style="height: 123px;">
               <div class="col-5 offset-1 only-mobile-footer-content" style="text-align: left;">
-                <img src="img/ipsum/logo-blanco.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="img-footer-ipsum" style="position: relative; top: -11px; max-width: 130px;">
+                <img src="assets/img/ipsum/logo-blanco.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="img-footer-ipsum" style="position: relative; top: -11px; max-width: 130px;">
               </div>
               <div class="col-6 only-mobile-footer-content" style="text-align: right; padding-top: 39px;">
                 <a href="https://play.google.com/store/apps/developer?id=Ipsum%20SpA&hl=en" target="_blank" class="link-android-specific-style">
-                  <img src="img/ipsum/android_store.png" alt="" class="stores-img" style=" margin-bottom: -1px;">
+                  <img src="assets/img/ipsum/android_store.png" alt="" class="stores-img" style=" margin-bottom: -1px;">
                 </a>
                 <br>
                 <br>
                 <a href="https://itunes.apple.com/us/app/proplanner/id1436981907?ls=1&mt=8" target="_blank">
-                  <img src="img/ipsum/apple_store.png" alt="" class="stores-img" style="margin-top: -36px; margin-right: 4px;">
+                  <img src="assets/img/ipsum/apple_store.png" alt="" class="stores-img" style="margin-top: -36px; margin-right: 4px;">
                 </a>
               </div>
             </div>
@@ -550,7 +535,7 @@
     <div class="content-dialog">
         <div class="row">
           <div class="col">
-            <img src="img/ipsum/logo.png" alt="" style="max-width: 180px;">
+            <img src="assets/img/ipsum/logo.png" alt="" style="max-width: 180px;">
           </div>
         </div>
 
@@ -825,35 +810,32 @@
 
 
   <!-- Languages -->
-  <script type="text/javascript" src="img/ipsum/translate/en.js"></script>
-  <script type="text/javascript" src="img/ipsum/translate/es.js"></script>
-  <script type="text/javascript" src="img/ipsum/translate/pr.js"></script>
+  <script src="assets/translate/en.js" type="text/javascript" ></script>
+  <script src="assets/translate/es.js" type="text/javascript"></script>
+  <script src="assets/translate/pr.js" type="text/javascript"></script>
 
   <!-- flags icons -->
-  <script src="js/docs.js"></script>
-  <script src="img/ipsum/translate/phone-codes.js"></script>
+  <script src="assets/js/docs.js"></script>
+  <script src="assets/translate/phone-codes.js"></script>
 
   <!-- JavaScript Libraries -->
-  <script src="js/angular.js"></script>
-  <script src="js/angular-device.js"></script>
-  <script src="js/angular-restrict.js"></script>
-  <script src="js/angular-touch.js"></script>
-  <script src="js/re-tree.js"></script>
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/aos/aos.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="assets/js/angular.js"></script>
+  <script src="assets/js/angular-device.js"></script>
+  <script src="assets/js/angular-restrict.js"></script>
+  <script src="assets/js/angular-touch.js"></script>
+  <script src="assets/js/re-tree.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery-migrate.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/easing.min.js"></script>
+  <script src="assets/js/aos.js"></script>
 
   <!-- Template Main Javascript File -->
-  <script src="js/non-scoped-functions.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/env.js"></script>
-  <script src="js/slider.js"></script>
+  <script src="assets/js/non-scoped-functions.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/env.js"></script>
+  <script src="assets/js/slider.js"></script>
 
 
 
