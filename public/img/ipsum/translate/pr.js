@@ -94,5 +94,12 @@ var pr = {
   },
   ERROR_GENERAL: {
     NON_SENDED_MAIL: "Lamentamos, mas sua solicitação não pôde ser feita, verifique sua conexão com a Internet ou tente novamente."
+  },
+  MOBILE: {
+    FEATURES_TITLE: "características",
+    ASK_FOR_VISIT:{
+      TEXT: "Solicite uma visita para sua apresentação ao vivo",
+      BTN_TEXT: "Agende seu horário"
+    }
   }
 }

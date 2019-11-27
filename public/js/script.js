@@ -1,6 +1,6 @@
 
 //Main declaration of the vim or app angular module instance
-var app = angular.module('landing', ['ngPatternRestrict'])
+var app = angular.module('landing', ['ngPatternRestrict', 'ng.deviceDetector'])
 
 
 // Directives applied for the main instance of angular
@@ -20,8 +20,10 @@ app.controller('mainApp', mainAppFunction )
 
 
 // Controllers functions
-async function mainAppFunction( $scope, $http, $timeout )
+async function mainAppFunction( $scope, $http, $timeout, deviceDetector )
 {
+
+  console.log("Device_detector: ",)
   //Init vars
   var actual_flag = ""; //To get a snapshot of the flag at the phone selector
   $scope.codePhoneNumbers = codePhoneNumbers; //JSON of all code numbers for phone selector at the FORM
@@ -33,8 +35,11 @@ async function mainAppFunction( $scope, $http, $timeout )
   $scope.sending = false  // Initial state for fetching logic (API mailing)
   $scope.sended = false // Initial state for fetching logic (API mailing)
   $scope.currentStep = 0 // Counter for a snapshot of the step in the form modal
-  $scope.contactForm = { name: 'alberto', email: 'a.herrera07@ufromail.cl', item: '', phone: '+56934940091' } // Fetching Object for query
+  $scope.contactForm = { name: '', email: '', item: '', phone: '+569' } // Fetching Object for query
   $scope.error = false
+  $scope.isMobile = deviceDetector.isMobile()
+  $scope.mobileOverFooterStyle = $scope.isMobile ? "over-over-footer" : ""
+  $scope.mobileIntegrationContainer = $scope.isMobile ? "integration-mobile" : "non-mobile-integration"
 
 
 
@@ -73,7 +78,6 @@ async function mainAppFunction( $scope, $http, $timeout )
       var actual_flag = ""; //To get a snapshot of the flag at the phone selector
       $scope.codePhoneNumbers = codePhoneNumbers; //JSON of all code numbers for phone selector at the FORM
       $scope.flagStyle = "flag-icon-cl"; //Initial flag skin based on the Adobe XD Mock-up
-      $scope.page_texts = es; // Initial language hardcoded by now (should detect the zone)
       $scope.isPanelVisible = false; // Initial state for the modal
       $scope.steps = [ true, false, false, false, false ] // Initial state of form steps in modal
       $scope.notSending = true // Initial state for fetching logic (API mailing)

@@ -28,6 +28,7 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/slider.css" rel="stylesheet">
 
 
   <!-- icons flags -->
@@ -36,8 +37,14 @@
   <link href="css/flag-icon.css" rel="stylesheet">
 </head>
 
-<body ng-controller="mainApp">
+<body ng-controller="mainApp" class="body-mobile-container">
+
+
+
   <fullscreen-dialog>
+
+
+
     <!--==========================
       Header
     ============================-->
@@ -71,6 +78,9 @@
     <video autoplay muted loop id="back-video">
       <source src="img/ipsum/vids/video.mp4" type="video/mp4">
     </video>
+
+
+
     <section id="intro">
       <div class="intro-text">
         <h2>{{ page_texts.TOP_SECTOR.TITLE_TEXT }}</h2>
@@ -81,12 +91,29 @@
 
     </section><!-- #intro -->
 
-    <main id="main" style="width: 100%;">
+    <main id="main" class="mobile-main-container" style="width: 100%;">
+
+
+
+
+
+
+
+
+
       <!--==========================
         Product Featuress Section
       ============================-->
       <section id="features">
         <div class="container">
+
+
+
+
+
+
+
+
           <div class="section-header" data-aos="fade" data-aos-duration="1000" style="margin-bottom: 95px;">
             <h3 class="section-title">{{ page_texts.ABOUT_SECTOR.TITLE_TEXT }}</h3>
             <div class="divider div-transparent"></div>
@@ -136,9 +163,107 @@
       <!--==========================
         Product Advanced Featuress Section
       ============================-->
-      <section id="advanced-features" style="background-color: #333">
 
-        <div class="features-row section-bg specs-background">
+
+
+
+
+
+      <section id="advanced-features" ng-class="mobileOverFooterStyle" style="background-color: #333">
+
+        <div ng-if="isMobile" class="features-row section-bg specs-background" style="height: 354px !important">
+
+
+
+          <div class="section-header" data-aos="fade" data-aos-duration="1000" style="margin-bottom: 28px; margin-top: -44px;">
+            <h3 style="text-align: center; font-style: inherit; color: white; margin-bottom: 0px;">{{ page_texts.MOBILE.FEATURES_TITLE }}</h3>
+            <div class="divider div-transparent"></div>
+          </div>
+
+          <div class="slideshow-container">
+            <div class="slideshow-inner">
+              <div class="mySlides fade-in" style="display: block;">
+
+                <div class="row">
+                  <div class="col-4 offset-1">
+                    <div class="imgs-description-container">
+                      <img src="img/ipsum/img_ritmica.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description img-slider-container">
+                    </div>
+                  </div>
+
+                  <div class="col-6 text-slider-container">
+                    <h4 class="title specs-title">
+                      <a>
+                        {{ page_texts.SPECS.PROGRA.TITLE_TEXT }}
+                      </a>
+                    </h4>
+                    <p class="description specs-description">
+                      {{ page_texts.SPECS.PROGRA.BODY_TEXT }}
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="mySlides fade-in">
+
+                <div class="row">
+                  <div class="col-4 offset-1">
+                    <div class="imgs-description-container">
+                      <img src="img/ipsum/img_protocolos.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description img-slider-container">
+                    </div>
+                  </div>
+
+                  <div class="col-6 text-slider-container">
+                    <h4 class="title specs-title">
+                      <a>
+                        {{ page_texts.SPECS.PROTO.TITLE_TEXT }}
+                      </a>
+                    </h4>
+                    <p class="description specs-description">
+                      {{ page_texts.SPECS.PROTO.BODY_TEXT }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mySlides fade-in">
+
+                <div class="row">
+                  <div class="col-4 offset-1">
+                    <div class="imgs-description-container">
+                      <img src="img/ipsum/img_bim.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="imgs-description img-slider-container">
+                    </div>
+                  </div>
+
+                  <div class="col-6 text-slider-container" style="margin-top: 20px;">
+                    <h4 class="title specs-title">
+                      <a>
+                        {{ page_texts.SPECS.BIM.TITLE_TEXT }}
+                      </a>
+                    </h4>
+                    <p class="description specs-description">
+                      {{ page_texts.SPECS.BIM.BODY_TEXT }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br/>
+
+
+          <div style='text-align: center;'>
+            <span class="dot active" onclick='currentSlide(1)'></span>
+            <span class="dot" onclick='currentSlide(2)'></span>
+            <span class="dot" onclick='currentSlide(3)'></span>
+          </div>
+        </div>
+
+
+
+
+        <div ng-if="!isMobile" class="features-row section-bg specs-background">
           <div class="container">
             <div class="row">
 
@@ -208,7 +333,7 @@
         <div class="container over-footer-integration">
             <div class="row">
 
-              <div class="col-lg-12 col-md-12 ">
+              <div class="col-lg-12 col-md-12" ng-class="mobileIntegrationContainer">
 
                 <div class="row integration-soft-text">
                   <div class="col-lg-5 col-md-5 box" data-aos="fade-left" data-aos-delay="100">
@@ -242,93 +367,150 @@
       <!--==========================
         Contact Section
       ============================-->
-      <section id="contact" class="contact-section-style">
+
+      <section id="mobile-only-contact" ng-if="isMobile" style="height: 120px; margin-top: 29px; margin-bottom: 30px;">
         <div class="container">
-          <div class="row footer-detail footer-detail-container" data-aos="fade-left">
 
-            <div class="row">
 
-              <div class="col-lg-12 col-md-12 footer-ipsum-container">
-
-                <div class="row">
-                  <div class="col-lg-4 col-md-4 box" data-aos="fade-left" data-aos-delay="100">
-                    <div class="img-footer-ipsum-container">
-                      <img src="img/ipsum/logo-blanco.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="img-footer-ipsum">
-                    </div>
-                    <p class="description specs-description">
-                      {{ page_texts.FOOTER.BODY_TEXT }}
-                    </p>
-                  </div>
+          <div class="section-header" data-aos="fade" data-aos-duration="1000" style="margin-bottom: 12px;">
+            <h4 class="section-title" style="font-size: 16px; font-weight: 400; margin-bottom: 10px;">{{ page_texts.MOBILE.ASK_FOR_VISIT.TEXT }}</h4>
+            <div class="divider div-transparent"></div>
+          </div>
 
 
 
+          <div class="row">
+            <div class="col-lg-8 col-md-7 ">
 
-                  <div class="col-lg-4 col-md-4 box contact-container-conf footer-contact-container" data-aos="fade-left" data-aos-delay="200">
-                    <h4 class="title contact-info-title">
-                      <a style="font-weight: 600;">
-                        {{ page_texts.FOOTER.CONTACT }}
-                      </a>
-                    </h4>
-                    <p class="description footer-contact-info">
-                      contacto@ipsumapp.co
-                    </p>
-                    <br>
-                    <p class="description footer-contact-info">
-                      +56 9 9547 8087
-                    </p>
-                    <br>
-                    <p class="description footer-contact-info">
-                      Av. Providencia 1208, Edificio Pamplona, Piso 21, Oficina 2101.
-                    </p>
-                    <br>
-                    <p class="description footer-contact-info">
-                      Providencia, Santiago, Chile.
-                    </p>
-                    <br>
-                    <div class="btn-ask-footer-container">
-                      <a href="" ng-click="showDialog()" class="btn-ask-footer">
-                        {{ page_texts.FOOTER.BTN_TEXT }}
-                      </a>
-                    </div>
-
-                  </div>
-
-                  <div class="col-lg-4 col-md-4 box contact-container-conf" data-aos="fade-left" data-aos-delay="300">
-                    <div class="rrss-icons-styles">
-                      <a href="https://play.google.com/store/apps/developer?id=Ipsum%20SpA&hl=en" target="_blank" class="link-android-specific-style">
-                        <img src="img/ipsum/android_store.png" alt="" class="stores-img">
-                      </a>
-                      <br>
-                      <br>
-                      <a href="https://itunes.apple.com/us/app/proplanner/id1436981907?ls=1&mt=8" target="_blank">
-                        <img src="img/ipsum/apple_store.png" alt="" class="stores-img" style="margin-top: -20px;">
-                      </a>
-
-                      <br>
-                      <br>
-                      <a href="https://www.facebook.com/ipsumapp/" target="_blank">
-                        <img src="img/ipsum/fb_logo.png" alt="" class="rrss-styles">
-                      </a>
-                      <a href="https://www.instagram.com/ipsumapp/" target="_blank">
-                        <img src="img/ipsum/linkedin_logo.png" alt="" class="rrss-styles">
-                      </a>
-                      <a href="https://www.linkedin.com/company/ipsumapp" target="_blank">
-                        <img src="img/ipsum/instagram_logo.png" alt="" class="rrss-styles">
-                      </a>
-
-
-                    </div>
-                  </div>
+              <div class="row">
+                <div class="col-lg-3 col-md-3 box" data-aos="fade-left">
                 </div>
+                <div class="col-lg-9 col-md-9 box" data-aos="fade-left" data-aos-delay="100">
+                  <div style="text-align: center;">
+                    <a href="" ng-click="showDialog()" class="btn-ask-demo" style="font-size: 11px; width: 198px !important;">
+                      {{ page_texts.MOBILE.ASK_FOR_VISIT.BTN_TEXT }}
+                    </a>
+                  </div>
 
-
+                </div>
+                <div class="col-lg-6 col-md-6 box" data-aos="fade-left" data-aos-delay="200">
+                </div>
+                <div class="col-lg-6 col-md-6 box" data-aos="fade-left" data-aos-delay="300">
+                </div>
               </div>
 
             </div>
 
+          </div>
 
+        </div>
+
+      </section><!-- #features -->
+
+
+      <section id="contact" class="contact-section-style">
+
+        <div ng-if="!isMobile" class="container">
+          <div  class="row footer-detail footer-detail-container" data-aos="fade-left">
+            <div class="col-lg-12 col-md-12 footer-ipsum-container">
+
+              <div class="row">
+                <div class="col-lg-4 col-md-4 box" data-aos="fade-left" data-aos-delay="100">
+                  <div class="img-footer-ipsum-container">
+                    <img src="img/ipsum/logo-blanco.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="img-footer-ipsum">
+                  </div>
+                  <p class="description specs-description">
+                    {{ page_texts.FOOTER.BODY_TEXT }}
+                  </p>
+                </div>
+
+
+
+
+                <div class="col-lg-4 col-md-4 box contact-container-conf footer-contact-container" data-aos="fade-left" data-aos-delay="200">
+                  <h4 class="title contact-info-title">
+                    <a style="font-weight: 600;">
+                      {{ page_texts.FOOTER.CONTACT }}
+                    </a>
+                  </h4>
+                  <p class="description footer-contact-info">
+                    contacto@ipsumapp.co
+                  </p>
+                  <br>
+                  <p class="description footer-contact-info">
+                    +56 9 9547 8087
+                  </p>
+                  <br>
+                  <p class="description footer-contact-info">
+                    Av. Providencia 1208, Edificio Pamplona, Piso 21, Oficina 2101.
+                  </p>
+                  <br>
+                  <p class="description footer-contact-info">
+                    Providencia, Santiago, Chile.
+                  </p>
+                  <br>
+                  <div class="btn-ask-footer-container">
+                    <a href="" ng-click="showDialog()" class="btn-ask-footer">
+                      {{ page_texts.FOOTER.BTN_TEXT }}
+                    </a>
+                  </div>
+
+                </div>
+
+                <div class="col-lg-4 col-md-4 box contact-container-conf" data-aos="fade-left" data-aos-delay="300">
+                  <div class="rrss-icons-styles">
+                    <a href="https://play.google.com/store/apps/developer?id=Ipsum%20SpA&hl=en" target="_blank" class="link-android-specific-style">
+                      <img src="img/ipsum/android_store.png" alt="" class="stores-img">
+                    </a>
+                    <br>
+                    <br>
+                    <a href="https://itunes.apple.com/us/app/proplanner/id1436981907?ls=1&mt=8" target="_blank">
+                      <img src="img/ipsum/apple_store.png" alt="" class="stores-img" style="margin-top: -20px;">
+                    </a>
+
+                    <br>
+                    <br>
+                    <a href="https://www.facebook.com/ipsumapp/" target="_blank">
+                      <img src="img/ipsum/fb_logo.png" alt="" class="rrss-styles">
+                    </a>
+                    <a href="https://www.instagram.com/ipsumapp/" target="_blank">
+                      <img src="img/ipsum/linkedin_logo.png" alt="" class="rrss-styles">
+                    </a>
+                    <a href="https://www.linkedin.com/company/ipsumapp" target="_blank">
+                      <img src="img/ipsum/instagram_logo.png" alt="" class="rrss-styles">
+                    </a>
+
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
 
           </div>
+
+        </div>
+
+
+        <div ng-if="isMobile" class="container footer-mobile-container">
+
+            <div class="row footer-detail footer-detail-container" data-aos="fade-left" style="height: 123px;">
+              <div class="col-5 offset-1 only-mobile-footer-content" style="text-align: left;">
+                <img src="img/ipsum/logo-blanco.png" alt="" data-aos="fade-right" data-aos-easing="ease-out-back" class="img-footer-ipsum" style="position: relative; top: -11px; max-width: 130px;">
+              </div>
+              <div class="col-6 only-mobile-footer-content" style="text-align: right; padding-top: 39px;">
+                <a href="https://play.google.com/store/apps/developer?id=Ipsum%20SpA&hl=en" target="_blank" class="link-android-specific-style">
+                  <img src="img/ipsum/android_store.png" alt="" class="stores-img" style=" margin-bottom: -1px;">
+                </a>
+                <br>
+                <br>
+                <a href="https://itunes.apple.com/us/app/proplanner/id1436981907?ls=1&mt=8" target="_blank">
+                  <img src="img/ipsum/apple_store.png" alt="" class="stores-img" style="margin-top: -36px; margin-right: 4px;">
+                </a>
+              </div>
+            </div>
+
         </div>
       </section><!-- #contact -->
 
@@ -653,7 +835,9 @@
 
   <!-- JavaScript Libraries -->
   <script src="js/angular.js"></script>
+  <script src="js/angular-device.js"></script>
   <script src="js/angular-restrict.js"></script>
+  <script src="js/re-tree.js"></script>
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -667,7 +851,7 @@
   <script src="js/main.js"></script>
   <script src="js/script.js"></script>
   <script src="js/env.js"></script>
-
+  <script src="js/slider.js"></script>
 
 
 

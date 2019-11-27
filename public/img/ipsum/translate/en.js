@@ -93,5 +93,12 @@ var en = {
   },
   ERROR_GENERAL: {
     NON_SENDED_MAIL: "We are sorry but your request could not be made, verify your internet connection or try again."
+  },
+  MOBILE: {
+    FEATURES_TITLE: "Features",
+    ASK_FOR_VISIT:{
+      TEXT: "Request a visit for your live presentation",
+      BTN_TEXT: "Schedule your time"
+    }
   }
 }

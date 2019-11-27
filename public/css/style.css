@@ -51,6 +51,10 @@ h1, h2, h3, h4, h5, h6 {
   transition: none;
 }
 
+.non-mobile-integration{
+  background: #333;
+}
+
 .back-to-top:focus {
   background: linear-gradient(45deg, #1de099, #1dc8cd);
   color: #fff;
@@ -2199,4 +2203,10 @@ input {
   50% {
     opacity: 0.5;
   }
+}
+
+
+.only-mobile-footer-content{
+  text-align: left;
+  padding-top: 20px;
 }

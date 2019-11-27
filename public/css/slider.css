@@ -1,0 +1,151 @@
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto
+}
+
+.mySlides {
+    display: none;
+    height: 226px;
+
+
+}
+
+
+@media (max-width: 767px){
+
+  .text-slider-container{
+    margin-left: 53px;
+    padding-right: 37px;
+  }
+
+  .over-footer-integration {
+      height: 14px;
+      background-color: white !important;
+  }
+
+  .over-over-footer{
+    background-color: white !important;
+
+  }
+
+  .footer-mobile-container{
+    height: 160px;
+  }
+
+  .body-mobile-container{
+    background-color: #333;
+  }
+
+  .integration-mobile{
+    background-color: white;
+    height: 191px;
+  }
+
+  .mobile-main-container{
+    background-color: white;
+  }
+
+}
+
+
+
+@media (max-width: 630px){
+
+  .text-slider-container{
+    margin-left: 36px;
+    padding-right: 37px;
+  }
+
+  .img-slider-container{
+    max-width: 116% !important;
+    margin-top: 29px;
+  }
+}
+
+@media (max-width: 491px){
+
+  .text-slider-container{
+    margin-left: 4px;
+    padding-right: 0px;
+    font-size: 12px;
+  }
+
+  .img-slider-container{
+    max-width: 136% !important;
+    margin-top: 69px;
+    margin-left: -18px;
+  }
+}
+@media (max-width: 350px){
+
+  #advanced-features p {
+      line-height: 18px;
+  }
+}
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #222428;
+    font-weight: bold;
+    font-size: 30px;
+    transition: .6s ease;
+    border-radius: 0 3px 3px 0
+}
+
+.next {
+    right: -50px;
+    border-radius: 3px 3px 3px 3px
+}
+
+.prev {
+    left: -50px;
+    border-radius: 3px 3px 3px 3px
+}
+
+.prev:hover,
+.next:hover {
+    color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.8)
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding-top: 12px;
+  padding-bottom: 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #222428
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease
+}
+
+.active,
+.dot:hover {
+    background-color: #717171
+}

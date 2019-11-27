@@ -94,5 +94,12 @@ var es = {
   },
   ERROR_GENERAL: {
     NON_SENDED_MAIL: "Lo sentimos, pero su solicitud pudo ser completada, verifique su conexión a Internet o intente nuevamente."
+  },
+  MOBILE: {
+    FEATURES_TITLE: "Caracteristicas",
+    ASK_FOR_VISIT:{
+      TEXT: "Solicita una visita para tu presentación en vivo",
+      BTN_TEXT: "Agenda tu hora"
+    }
   }
 }
